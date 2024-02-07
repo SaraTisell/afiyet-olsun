@@ -20,12 +20,14 @@ from home import views as index_views
 from contact import views as contact_views
 from reviews import views as reviews_views
 from booking import views as booking_views
+from menu import views as menu_views
 
 urlpatterns = [
     path('', index_views.index, name='index'),
     path('admin/', admin.site.urls),
     path('booking/', booking_views.table_booking, name='booking'),
     path('contact/', contact_views.contact_us, name='contact'),
+    path('menu/', menu_views.view_menu, name='menu'),
     path('reviews/', reviews_views.user_review, name='reviews'),
     
     
