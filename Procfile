@@ -1,0 +1,1 @@
+web: gunicorn afiyet_olsun.wsgi
