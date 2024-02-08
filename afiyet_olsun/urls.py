@@ -19,14 +19,14 @@ from django.urls import path, include
 from home import views as index_views
 from contact import views as contact_views
 from reviews import views as reviews_views
-from booking import views as booking_views
 from menu import views as menu_views
+from booking import views as booking_views
 
 urlpatterns = [
-    path('', index_views.index, name='index'),
-    path('admin/', admin.site.urls),
+#    path('', index_views.index, name='index'),
     path('', include('home.urls')),
-    path('booking/', booking_views.table_booking, name='booking'),
+    path('admin/', admin.site.urls),
+    path('booking/', include('booking.urls')),
     path('contact/', contact_views.contact_us, name='contact'),
     path('menu/', menu_views.view_menu, name='menu'),
     path('reviews/', reviews_views.user_review, name='reviews'),
