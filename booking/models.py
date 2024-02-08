@@ -32,3 +32,7 @@ class Reservation(models.Model):
     reservation_date = models.DateField()
     reservation_time = models.CharField(max_length=10, choices=RESERVATION_TIME)
     company_size = models.IntegerField(default=1)
+
+
+class Table(models.Model):
+    table_id = models.IntegerField()
