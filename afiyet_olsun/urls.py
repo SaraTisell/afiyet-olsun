@@ -25,6 +25,7 @@ from menu import views as menu_views
 urlpatterns = [
     path('', index_views.index, name='index'),
     path('admin/', admin.site.urls),
+    path('', include('home.urls')),
     path('booking/', booking_views.table_booking, name='booking'),
     path('contact/', contact_views.contact_us, name='contact'),
     path('menu/', menu_views.view_menu, name='menu'),
