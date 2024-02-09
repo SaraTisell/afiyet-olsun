@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
+
 STATUS_CHOICE= ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
@@ -18,3 +19,9 @@ class Review(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS_CHOICE, default=0)
     approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_at']
+
+    def __str__(self):
+        return f'{self.author} - {self.created_at.strftime("%B %d, %Y")}'
