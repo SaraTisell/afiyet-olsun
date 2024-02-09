@@ -24,4 +24,4 @@ class Review(models.Model):
         ordering = ['created_at']
 
     def __str__(self):
-        return f'{self.author} - {self.created_at.strftime("%B %d, %Y")}'
+        return f'{self.author} - {self.created_at.strftime("%B %d, %Y")} | {self.content}'
