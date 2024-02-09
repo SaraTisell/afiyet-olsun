@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator
 
 
 RESERVATION_TIME= (
@@ -31,7 +32,10 @@ class Reservation(models.Model):
     guest_name = models.CharField(max_length=50)
     reservation_date = models.DateField()
     reservation_time = models.CharField(max_length=10, choices=RESERVATION_TIME)
-    company_size = models.IntegerField(default=1)
+    company_size = models.IntegerField(default=1, 
+            validators=[
+            MinValueValidator(1)
+        ])
 
 
 class Table(models.Model):
