@@ -17,3 +17,4 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS_CHOICE, default=0)
+    approved = models.BooleanField(default=False)
