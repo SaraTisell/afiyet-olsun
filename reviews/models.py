@@ -2,14 +2,18 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
+
+STATUS_CHOICE= ((0, "Draft"), (1, "Published"))
+
 # Create your models here.
 class Review(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    rating = models.IntegerField(default=0,
+    rating = models.IntegerField(default=1,
         validators=[
             MaxValueValidator(5),
-            MinValueValidator(0)
+            MinValueValidator(1)
         ])
     content = models.TextField(max_length=150)
     created_at = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(choices=STATUS_CHOICE, default=0)
