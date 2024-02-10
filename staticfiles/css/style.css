@@ -1,9 +1,21 @@
 body {
     background-color: #040606;
     color: beige;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 footer {
-    height: 100px;
     background-color: #392d1f;
+    color: beige;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+
 }
