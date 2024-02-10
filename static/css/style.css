@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
@@ -22,9 +23,20 @@ main {
     align-items: center;
     flex-direction: row;
 }
+.img-container {
+    display: flex;
+    align-self: center;
+    align-items: center;
+
+}
 
 #logo {
-    width: 40vh;
+    width: 30rem;
+    padding: 20px;
+}
+
+.nav-bar {
+    margin-left: auto;
 }
 
 .nav-bar nav ul {
