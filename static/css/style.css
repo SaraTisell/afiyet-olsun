@@ -1,6 +1,7 @@
 body {
     background-color: #040606;
     color: beige;
+    height: 100vh;
 }
 
 #custom-toggler {
@@ -23,6 +24,12 @@ body {
     max-width: 300px;
 }
 
+
+/* Footer */
+
+.footer {
+    background-color: #AF977A;
+}
 
 /* HOME PAGE --> Index.hmtl */
 
