@@ -22,3 +22,13 @@ body {
     width: fit-content;
     max-width: 300px;
 }
+
+
+/* HOME PAGE --> Index.hmtl */
+
+.banner {
+    background-image: url('../img/ao-banner.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
