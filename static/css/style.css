@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+/* General styles for rows and cols*/
+.row {
+    --bs-gutter-x: 0;  /* Remove horizontal gutter spacing */
+    margin: 10px;
+}
 body {
     background-color: #040606;
     color: beige;
@@ -47,9 +52,13 @@ header {
 .banner {
     background-image: url('../img/ao-banner.webp');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 600px;
 }
 
-
+#welcome-div {
+    background-color: rgb(57, 45, 31, 0.8);
+    border: 3px solid #392D1F;
+}
 
