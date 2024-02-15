@@ -99,3 +99,23 @@ header {
     color: beige;
     border-radius: 0;
 }
+
+#signup-div {
+    border: 3px solid #392D1F;
+    padding: 10px;
+    margin: 10px;
+}
+
+#signup-div a {
+    color: #822121;
+    font-weight: bold;
+}
+
+#signup-div button {
+    background-color: #822121;
+    padding: 4px 20px;
+    border: 2px solid black;
+    font-size: 15px;
+    color: beige;
+    border-radius: 0;
+}
