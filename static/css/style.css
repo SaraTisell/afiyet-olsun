@@ -62,3 +62,26 @@ header {
     border: 3px solid #392D1F;
 }
 
+/* Login page */
+
+#login-div {
+    background-color: rgb(57, 45, 31, 0.8);
+    border: 3px solid #392D1F;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+#login-div a {
+    color: #822121;
+    font-weight: bold;
+}
+
+#login-div button {
+    background-color: #040606;
+    padding: 4px 20px;
+    border: 2px solid black;
+    font-size: 15px;
+    color: beige;
+    border-radius: 0;
+}
