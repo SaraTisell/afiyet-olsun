@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator
 
+
 # Avaliable times for a reservation
 RESERVATION_TIME= (
     ("12pm", "12:00pm - 1.25pm"),
@@ -38,6 +39,7 @@ class Reservation(models.Model):
             validators=[
             MinValueValidator(1)
         ])
+    additional_info = models.TextField(max_length=200, blank=True, null=True)
     
     class Meta:
         """ Ordering reservations based on date and time """
