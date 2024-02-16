@@ -6,8 +6,15 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-8 mx-auto" id="booking-div">
-            {{ booking_form | crispy }}
-            {% csrf_token %}
+            {% if user.is_authenticated %}
+            <form id="booking-form" method="post">
+                {{ booking_form | crispy }}
+                {% csrf_token %}
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
+            {% else %}
+            <p>Login to book a table</p>
+            {% endif %}
         </div>
     </div>
 </div>
