@@ -12,7 +12,9 @@
 body {
     background-color: #040606;
     color: beige;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -40,6 +42,9 @@ header {
     max-width: 300px;
 }
 
+main {
+    flex: 1 0 auto;
+}
 
 /* Footer */
 
