@@ -1,6 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-<h1>this is the booking page</h1>
+{{ booking_form | crispy }}
+{% csrf_token %}
 
 {% endblock %}
