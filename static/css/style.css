@@ -132,3 +132,12 @@ main {
     color: beige;
     border-radius: 0;
 }
+
+
+/* Booking page */
+#booking-div {
+    background-color: rgb(57, 45, 31, 0.8);
+    border: 3px solid #392D1F;
+    padding: 15px;
+}
+

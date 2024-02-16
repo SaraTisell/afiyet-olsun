@@ -1,3 +1,5 @@
+
+/* Override default styles added from browser */
 * {
     padding: 0;
     margin: 0;
@@ -9,6 +11,8 @@
     --bs-gutter-x: 0;  /* Remove horizontal gutter spacing */
     margin: 10px;
 }
+
+/* Genreal body styles */
 body {
     background-color: #040606;
     color: beige;
@@ -22,6 +26,7 @@ header {
     margin: 10px;
 }
 
+/* Navigation button*/
 #custom-toggler {
     background-color: #040606;
     border: 3px solid #822121;
@@ -41,6 +46,7 @@ header {
     width: 100%;
     max-width: 300px;
 }
+
 
 main {
     flex: 1 0 auto;
@@ -90,6 +96,7 @@ main {
     border-radius: 0;
 }
 
+/* Logout page */
 #logout-div {
     border: 3px solid #392D1F;
     padding: 10px;
@@ -105,6 +112,7 @@ main {
     border-radius: 0;
 }
 
+/* Sign up page */
 #signup-div {
     border: 3px solid #392D1F;
     padding: 10px;
@@ -124,3 +132,12 @@ main {
     color: beige;
     border-radius: 0;
 }
+
+
+/* Booking page */
+#booking-div {
+    background-color: rgb(57, 45, 31, 0.8);
+    border: 3px solid #392D1F;
+    padding: 15px;
+}
+
