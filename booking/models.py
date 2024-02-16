@@ -31,6 +31,7 @@ TABLE_SEATS = (
 # Create your models here.
 class Reservation(models.Model):
     """ Model to create reservation """
+    reservation_id = models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')
     guest = models.ForeignKey(User, on_delete=models.CASCADE)
     guest_name = models.CharField(max_length=50)
     reservation_date = models.DateField()
