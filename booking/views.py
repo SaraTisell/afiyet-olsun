@@ -1,4 +1,4 @@
-from django.views.generic.edit import CreateView
+from django.views.generic import CreateView, ListView
 from django.shortcuts import render
 from .models import Reservation, Table
 from .forms import BookingForm
@@ -20,3 +20,10 @@ class BookingFormView(CreateView):
         form = BookingForm()
         return render(request, 'booking/booking.html', {'booking_form': form})
 """
+
+class ReservationsViews(ListView):
+    template_name = 'booking/reservations.html'
+    model = Reservation
+
+    def get_queryset(self):
+        return Reservation.objects.filter(guest=self.request.user)
