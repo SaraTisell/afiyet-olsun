@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator
+import uuid
 
 
 # Avaliable times for a reservation
@@ -29,10 +30,26 @@ TABLE_SEATS = (
 
 
 # Create your models here.
+
+class Table(models.Model):
+    """ Model for available tables with seating capacity  """
+    table_id = models.IntegerField(unique=True)
+    capacity = models.IntegerField(choices=TABLE_SEATS)
+    quantity = models.IntegerField()
+
+    class Meta:
+        """ Ordering tables based on table seatings (capacity) and number of tables (quantity) with the capacity """
+        ordering = ['capacity', 'quantity']
+
+    def __str__(self):
+        return f' Table: {self.table_id} | Seatings: {self.capacity} | Quantity: {self.quantity}'
+
+
 class Reservation(models.Model):
     """ Model to create reservation """
-    reservation_id = models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')
-    guest = models.ForeignKey(User, on_delete=models.CASCADE)
+    reservation_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    table_id = models.ForeignKey(Table, on_delete=models.CASCADE, related_name="booking_table")
+    guest = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking_guest")
     guest_name = models.CharField(max_length=50)
     reservation_date = models.DateField()
     reservation_time = models.CharField(max_length=10, choices=RESERVATION_TIME)
@@ -47,8 +64,4 @@ class Reservation(models.Model):
         ordering = ['reservation_date', 'reservation_time']
 
     def __str__(self):
-        return f'{self.guest_name} - {self.reservation_date} - {self.reservation_time}'
-
-
-class Table(models.Model):
-    table_id = models.IntegerField()
+        return f'{self.reservation_id} - {self.guest_name} - {self.reservation_date} - {self.reservation_time}'
