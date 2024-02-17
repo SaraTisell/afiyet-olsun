@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.booking, name='booking'),
+    path('', views.BookingFormView.as_view(), name='booking'),
 ]
