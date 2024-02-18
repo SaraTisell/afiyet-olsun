@@ -36,14 +36,13 @@ class Table(models.Model):
     """ Model for available tables with seating capacity  """
     table_id = models.IntegerField(unique=True)
     capacity = models.IntegerField(choices=TABLE_SEATS)
-    quantity = models.IntegerField()
 
     class Meta:
-        """ Ordering tables based on table seatings (capacity) and number of tables (quantity) with the capacity """
-        ordering = ['capacity', 'quantity']
+        """ Ordering tables based on table number (id) and how many seatings (capacity) """
+        ordering = ['table_id', 'capacity']
 
     def __str__(self):
-        return f' Table: {self.table_id} | Seatings: {self.capacity} | Quantity: {self.quantity}'
+        return f' Table Number: {self.table_id} | Seatings: {self.capacity}'
 
 
 class Reservation(models.Model):
