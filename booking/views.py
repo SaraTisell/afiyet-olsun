@@ -19,10 +19,8 @@ class BookingFormView(CreateView):
         reservation_time = form.cleaned_data['reservation_time']
         company_size = form.cleaned_data['company_size']
 
-
-
-
-
+        # Check if tables is available for requested company size on desired date and time
+        available_tables = Table.objects.filter(availability=True, capacity__gte=company_size -1)
 
 
 
