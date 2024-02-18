@@ -20,7 +20,20 @@ class BookingFormView(CreateView):
         company_size = form.cleaned_data['company_size']
 
         # Check if tables is available for requested company size on desired date and time
-        available_tables = Table.objects.filter(availability=True, capacity__gte=company_size -1)
+        available_tables = Table.objects.filter(availability=True, capacity__in=[company_size + 1])
+
+        for table in available_tables:     
+            existing_table_reservation = Reservation.objects.filter(
+                reservation_date=reservation_date,
+                reservation_time=reservation_time,
+                table_id=table.id
+            )
+            if not existing_table_reservation.exists():
+                reservation.table_id = table
+                reservation.save()
+                return super().form_valid(form)
+
+
 
 
 
