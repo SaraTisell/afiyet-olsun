@@ -8,6 +8,23 @@ class BookingFormView(CreateView):
     template_name = 'booking/booking.html'
     form_class = BookingForm
     success_url = '#'
+    
+    def form_valid(self, form):
+
+        reservation = form.save(commit=False)
+        reservation.guest = self.request.user
+
+        # Check for availability
+        reservation_date = form.cleaned_data['reservation_date']
+        reservation_time = form.cleaned_data['reservation_time']
+        company_size = form.cleaned_data['company_size']
+
+
+
+
+
+
+
 
 
 
