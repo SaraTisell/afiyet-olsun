@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator
-import uuid
+from shortuuid.django_fields import ShortUUIDField
+
 
 
 # Avaliable times for a reservation
@@ -47,7 +48,7 @@ class Table(models.Model):
 
 class Reservation(models.Model):
     """ Model to create reservation """
-    reservation_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    reservation_id = ShortUUIDField(primary_key=True, length=6, max_length=6)
     table_id = models.ForeignKey(Table, on_delete=models.CASCADE, related_name="booking_table")
     guest = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking_guest")
     guest_name = models.CharField(max_length=50)
