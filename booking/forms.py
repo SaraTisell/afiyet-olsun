@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 class BookingForm(forms.ModelForm):
-    reservation_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date', 'max': datetime.now().date()}), label='Date')
+    reservation_date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date', 'min': datetime.now().date()}), label='Date')
 
     reservation_time = forms.ChoiceField(choices=RESERVATION_TIME, widget=forms.RadioSelect(), label='Time')
 

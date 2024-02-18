@@ -1,10 +1,15 @@
 from django.views.generic import CreateView, ListView
 from django.shortcuts import render
+from django.contrib import messages
 from .models import Reservation, Table
 from .forms import BookingForm
 
 
 class BookingFormView(CreateView):
+    """
+    View to render booking form
+    for user to make a reservation
+    """
     template_name = 'booking/booking.html'
     form_class = BookingForm
     success_url = '#'
@@ -32,6 +37,8 @@ class BookingFormView(CreateView):
                 reservation.table_id = table
                 reservation.save()
                 return super().form_valid(form)
+
+        
 
 
 
