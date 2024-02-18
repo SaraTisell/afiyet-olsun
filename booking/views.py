@@ -9,6 +9,8 @@ class BookingFormView(CreateView):
     form_class = BookingForm
     success_url = '#'
 
+
+
 """
     def form_valid(self, form):
         form.save()
