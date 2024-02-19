@@ -1,4 +1,5 @@
 from django import forms
+#from django.forms import TextInput, EmailInput, TextArea
 from .models import ContactRequest
 from datetime import datetime
 
@@ -20,3 +21,10 @@ class ContactUsForm(forms.ModelForm):
             'title': 'Subject',
             'message': 'Message'
         }
+
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': 'Your Name', 'class': 'forms-input'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'Your Email Address', 'class': 'forms-input'}),
+            'title': forms.TextInput(attrs={'placeholder': 'Subject', 'class': 'forms-input'}),
+            'message': forms.Textarea(attrs={'placeholder': 'Please write your message here'}),
+        }    

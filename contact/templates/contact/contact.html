@@ -3,19 +3,19 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid contact-banner">
     <div class="row">
-        <div class="col-12 col-md-8 mx-auto" id="booking-div">
+        <div class="col-12 col-md-8 mx-auto" id="contact-div">
             
-            <h1>Send a email</h1>
+            <h1>Contact Us</h1>
+            <p>We here at Restaurant Afiyet Olsun are here for your service</p>
+            <p>If you have any questions or special request regarding a booking <br>
+                 do not hesitate to contact us!</p>
             <form id="booking-form" method="post">
                 {% csrf_token %}
                 {{ contactus_form | crispy }}
-                <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                <button id="submitButton" type="submit" class="btn btn-signup btn-lg custom-btn">Submit</button>
             </form>
-            
-            <p>we will get back soon</p>
-            
         </div>
     </div>
 </div>

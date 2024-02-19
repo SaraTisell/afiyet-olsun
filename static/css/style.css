@@ -141,3 +141,57 @@ main {
     padding: 15px;
 }
 
+/* Contact page */
+#contact-div {
+    background-color: rgb(57, 45, 31, 0.8);
+    border: 3px solid #392D1F;
+    padding: 15px;
+}
+
+#contact-div h1 p {
+    text-align: center;
+} 
+
+.contact-banner {
+    background-image: url('../img/banner-ao-table.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+/* Form styles */
+.forms-input {
+    font-size: 13px;
+    border-radius: 0;
+    border: 2px solid rgb(130, 33, 33);
+    color: #040606;
+    background-color: beige;
+}
+
+#id_message {
+    font-size: 13px;
+    border-radius: 0;
+    border: 2px solid rgb(130, 33, 33);
+    color: #040606;
+    background-color: beige;
+    height: 20vh
+}
+
+#id_additional_info {
+    font-size: 13px;
+    border-radius: 0;
+    border: 2px solid rgb(130, 33, 33);
+    color: #040606;
+    background-color: beige;
+    height: 20vh
+}
+
+.custom-btn {
+    font-size: 13px;
+    border-radius: 0;
+    border: 2px solid #392D1F;
+    color: beige;
+    background-color: rgb(130, 33, 33);
+    padding: 5px 20px
+}
