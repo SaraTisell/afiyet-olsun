@@ -28,6 +28,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('booking/', include('booking.urls'), name="booking-urls"),
+    path('contact', include('contact.urls'), name="contact-urls"),
 #   path('reviews/', include("reviews.urls"), name="reviews-urls"),
 #    path('booking/', include('booking.urls')),
 #    path('contact/', contact_views.contact_us, name='contact'),
