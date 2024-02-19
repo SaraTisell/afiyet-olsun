@@ -1,12 +1,12 @@
 from django import forms
-from .models import Message
+from .models import ContactRequest
 from datetime import datetime
 
 
 class ContactUsForm(forms.ModelForm):
 
     class Meta:
-        model = Message
+        model = ContactRequest
         fields = [
             'name',
             'email',

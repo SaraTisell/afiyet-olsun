@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Message(models.Model):
+class ContactRequest(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
     title = models.CharField(max_length=50)
