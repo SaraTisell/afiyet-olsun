@@ -12,7 +12,7 @@ class BookingFormView(CreateView):
     """
     template_name = 'booking/booking.html'
     form_class = BookingForm
-    success_url = '#'
+    success_url = "/booking/reservations/"
     
     def form_valid(self, form):
 
@@ -22,41 +22,20 @@ class BookingFormView(CreateView):
         # Check for availability
         reservation_date = form.cleaned_data['reservation_date']
         reservation_time = form.cleaned_data['reservation_time']
-        company_size = form.cleaned_data['company_size']
 
-        # Check if tables is available for requested company size on desired date and time
-        #available_tables = Table.objects.filter(availability=True, capacity__in=[company_size + 1])
-"""
-        for table in available_tables:     
-            existing_table_reservation = Reservation.objects.filter(
-                reservation_date=reservation_date,
-                reservation_time=reservation_time,
+        # Count how many existing reservations there is on requested date and time
+        existing_table_reservation = Reservation.objects.filter(
+            reservation_date=reservation_date,
+            reservation_time=reservation_time).count()
 
-            )
-            if not existing_table_reservation.exists():
-                reservation.table_id = table
-                reservation.save()
-                return super().form_valid(form)
-"""
-        
+        # Checks that there is not 10 existing reservations on the requested date and time
+        if existing_table_reservation == 10:
+            return render(self.request, 'booking/booking.html', {'booking_form': form})
+        else:
+            reservation.save()
+            return super().form_valid(form)
+            
 
-
-
-
-
-
-
-"""
-    def form_valid(self, form):
-        form.save()
-
-    
-
-
-    def booking_view(request):
-        form = BookingForm()
-        return render(request, 'booking/booking.html', {'booking_form': form})
-"""
 
 class ReservationsViews(ListView):
     template_name = 'booking/reservations.html'
