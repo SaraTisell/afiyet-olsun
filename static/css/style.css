@@ -63,6 +63,12 @@ main {
     font-size: 20px;
 }
 
+i {
+    color:#822121;
+    font-size: 20px;
+    padding-right: 10px;
+}
+
 /* HOME PAGE --> Index.hmtl */
 
 .banner {
@@ -156,7 +162,11 @@ main {
     margin: 50px;
 }
 
-#contact-div h1, p {
+#contact-div h1 {
+    text-align: center;
+} 
+
+#contact-div p {
     text-align: center;
 } 
 
