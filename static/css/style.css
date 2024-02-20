@@ -205,6 +205,14 @@ i {
     height: 20vh
 }
 
+#id_company_size {
+    font-size: 13px;
+    border-radius: 0;
+    border: 2px solid rgb(130, 33, 33);
+    color: #040606;
+    background-color: beige;
+}
+
 .custom-btn {
     font-size: 13px;
     border-radius: 0;

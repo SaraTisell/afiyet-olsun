@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.core.validators import MinValueValidator
 from shortuuid.django_fields import ShortUUIDField
 
 
@@ -16,7 +15,7 @@ RESERVATION_TIME= (
 )
 
 
-TABLE_SEATS = (
+COMPANY_SIZE = (
     (1, "1"),
     (2, "2"),
     (3, "3"),
@@ -30,37 +29,15 @@ TABLE_SEATS = (
 )
 
 
-# Create your models here.
-
-class Table(models.Model):
-    """ Model for available tables with seating capacity  """
-    table_id = models.IntegerField(unique=True)
-    capacity = models.IntegerField(choices=TABLE_SEATS)
-    availability = models.BooleanField(default=True)
-
-    class Meta:
-        """ Ordering tables based on table number (id) and how many seatings (capacity) """
-        ordering = ['table_id', 'capacity']
-
-
-
-    def __str__(self):
-        status = "Available" if self.availability else "Booked"
-        return f' Table Number: {self.table_id} | Seatings: {self.capacity} | Status: {status}'
-
 
 class Reservation(models.Model):
     """ Model to create reservation """
     reservation_id = ShortUUIDField(primary_key=True, length=6, max_length=6)
-    table_id = models.ForeignKey(Table, on_delete=models.CASCADE, related_name="booking_table")
     guest = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking_guest")
     guest_name = models.CharField(max_length=50)
     reservation_date = models.DateField()
     reservation_time = models.CharField(max_length=10, choices=RESERVATION_TIME)
-    company_size = models.IntegerField(default=1, 
-            validators=[
-            MinValueValidator(1)
-        ])
+    company_size = models.CharField(default=1, choices=COMPANY_SIZE)
     additional_info = models.TextField(max_length=200, blank=True, null=True)
     
     class Meta:
