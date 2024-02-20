@@ -56,6 +56,11 @@ main {
 
 .footer {
     background-color: #392D1F;
+    padding: 30px 10px;
+}
+
+.footer h3 {
+    font-size: 20px;
 }
 
 /* HOME PAGE --> Index.hmtl */
@@ -71,6 +76,7 @@ main {
 #welcome-div {
     background-color: rgb(57, 45, 31, 0.8);
     border: 3px solid #392D1F;
+    margin: 50px;
 }
 
 /* Login page */
@@ -139,6 +145,7 @@ main {
     background-color: rgb(57, 45, 31, 0.8);
     border: 3px solid #392D1F;
     padding: 15px;
+    margin: 50px;
 }
 
 /* Contact page */
@@ -146,9 +153,10 @@ main {
     background-color: rgb(57, 45, 31, 0.8);
     border: 3px solid #392D1F;
     padding: 15px;
+    margin: 50px;
 }
 
-#contact-div h1 p {
+#contact-div h1, p {
     text-align: center;
 } 
 
@@ -194,4 +202,16 @@ main {
     color: beige;
     background-color: rgb(130, 33, 33);
     padding: 5px 20px
+}
+
+/* Opening hours table */
+
+.opening-hours {
+    background-color: #392D1F;
+    color: beige;
+    width: 200px;
+}
+
+.opening-hours th {
+    font-weight: 600;
 }
