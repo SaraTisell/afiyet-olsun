@@ -12,14 +12,26 @@
     margin: 10px;
 }
 
+/* Django messages */
+
+#msg {
+    background-color: rgb(130, 33, 33, 0.3);
+    border: 2px solid #822121;
+    border-radius: 0;
+    color: beige;
+}
+
 /* Genreal body styles */
 body {
     background-color: #040606;
     color: beige;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
+}
+/* Delete default margin from bootstrap */
+.row {
+    margin: 0;
 }
 
 header {
