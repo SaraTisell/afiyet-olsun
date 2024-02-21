@@ -166,6 +166,17 @@ i {
     margin: 50px;
 }
 
+/* Reservations page */
+#reservation-div {
+    background-color: rgb(57, 45, 31, 0.8);
+    border: 3px solid #392D1F;
+    padding: 15px;
+    margin: 50px;
+}
+
+.each-reservation {
+
+}
 /* Contact page */
 #contact-div {
     background-color: rgb(57, 45, 31, 0.8);
@@ -279,4 +290,12 @@ i {
 
 .opening-hours th {
     font-weight: 600;
+}
+
+.each-reservation {
+    background-color: #392D1F;
+    color: beige;
+    width: 100%;
+    font-size: 13px;
+    border: 2px solid #822121;
 }

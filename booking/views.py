@@ -1,5 +1,5 @@
 from django.views.generic import CreateView, ListView
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Reservation
 from .forms import BookingForm
@@ -40,11 +40,16 @@ class BookingFormView(CreateView):
             messages.success(self.request, message)
             return super().form_valid(form)
             
+def view_reservations(request):
+    reservations = Reservation.objects.filter(guest=request.user)
+    return render(request, 'booking/reservations.html', {'reservations': reservations})
 
 
+"""
 class ReservationsViews(ListView):
     template_name = 'booking/reservations.html'
     model = Reservation
 
     def get_queryset(self):
         return Reservation.objects.filter(guest=self.request.user)
+"""

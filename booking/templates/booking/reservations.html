@@ -5,12 +5,28 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-8 mx-auto" id="reservation-div">
+        <div class="col" id="reservation-div">
             <h1>Your Reservations</h1>
-
+            {% for reservation in reservations %}
+            <div class="row each-reservation">
+                <div class="col-md-3">Booking Id: {{ reservation.reservation_id }}</div>
+                <div class="col-md-3">Date: {{ reservation.reservation_date }}</div>
+                <div class="col-md-3">Time: {{ reservation.reservation_time }}</div>
+                <div class="col-md-3">Guests: {{ reservation.company_size }}</div>
+                <br>
+                {% endfor %}
+            </div>
         </div>
+
     </div>
 </div>
 
 
 {% endblock %}
+<!--
+<div class="row">
+    <div class="col-3 col-sm-1">Bookign Id: <div>{{ reservation.reservation_id }}</div> </div>
+    <div class="col-3 col-sm-1">Date: <div>{{ reservation.reservation_date }}</div></div>
+    <div class="col-3 col-sm-1">Time: <div>{{ reservation.reservation_time }}</div></div>
+    <div class="col-3 col-sm-1">Guests: <div>{{ reservation.company_size }}</div></div>
+</div> -->
