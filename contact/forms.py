@@ -17,7 +17,7 @@ class ContactUsForm(forms.ModelForm):
 
         labels = {
             'name': 'Name',
-            'email': 'Email address',
+            'email': 'Email',
             'title': 'Subject',
             'message': 'Message'
         }
