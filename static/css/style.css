@@ -190,6 +190,41 @@ i {
     height: auto;
 }
 
+/* Thank you page */
+.thanks-banner {
+    background-image: url('../img/ao-banner-pide.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+#thanks-div {
+    background-color: rgb(57, 45, 31, 0.8);
+    border: 3px solid #392D1F;
+    padding: 15px;
+    margin: 100px;
+    text-align: center;
+}
+
+.back-to-home {
+    border-radius: 0;
+    border: 2px solid #822121;
+    color: beige;
+    background-color: rgb(130, 33, 33, 0.3);
+    padding: 5px 20px;
+    width: 25vh;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.back-to-home a {
+    color: beige;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* Form styles */
 .forms-input {
     font-size: 13px;
