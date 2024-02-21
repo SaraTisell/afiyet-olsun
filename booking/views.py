@@ -30,9 +30,14 @@ class BookingFormView(CreateView):
 
         # Checks that there is not 10 existing reservations on the requested date and time
         if existing_table_reservation == 10:
-            return render(self.request, 'booking/booking.html', {'booking_form': form})
+            message = f"Tables are fully booked for {reservation_date} at {reservation_time}, Please try another date and time"
+            messages.error(self.request, message)
+            return super().form_invalid(form)
+
         else:
             reservation.save()
+            message = f"Your reservation for {reservation_date} at {reservation_time} is confirmed!"
+            messages.success(self.request, message)
             return super().form_valid(form)
             
 
