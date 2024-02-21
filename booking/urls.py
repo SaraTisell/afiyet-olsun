@@ -1,8 +1,11 @@
 from django.urls import path
-from . import views
+from .views import BookingFormView, ViewReservations, UpdateReservation, DeleteReservation
 
 
 urlpatterns = [
-    path('', views.BookingFormView.as_view(), name='booking'),
-    path('reservations/', views.view_reservations, name='reservations')
+    path('', BookingFormView.as_view(), name='booking'),
+    path('reservations/', ViewReservations.as_view(), name='reservations'),
+    path('reservation/<str:pk>/update', UpdateReservation.as_view(), name='reservation_update'),
+    path('reservation/<str:pk>/delete', DeleteReservation.as_view(), name= 'reservation_delete'),
+
 ]
