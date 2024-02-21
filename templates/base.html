@@ -43,7 +43,7 @@
             </div>
             <!-- Logo -->
             <div class="col text-center">
-              <a class="navbar-brand mx-auto" href="#">
+              <a class="navbar-brand mx-auto" href="{% url 'index' %}">
                 <img id="header-logo" src="{% static 'img/logo-ao.webp' %}" alt="Afiyet Olsun Logo" class="img-fluid">
               </a>
             </div>
@@ -55,7 +55,7 @@
               <div class="collapse navbar-collapse justify-content-end" id="nav">
                 <ul class="navbar-nav w-100 justify-content-end">
                   <li class="nav-item">
-                    <a href="#" class="nav-link active">Home</a>
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
                   </li>
                   <li class="nav-item">
                     <a href="#" class="nav-link">Menu</a>
