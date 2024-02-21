@@ -14,6 +14,7 @@ class BookingForm(forms.ModelForm):
         model = Reservation
         fields = [
             'guest_name',
+            'email',
             'reservation_date',
             'reservation_time',
             'company_size',
@@ -22,10 +23,12 @@ class BookingForm(forms.ModelForm):
 
         labels = {
             'guest_name': 'Name',
+            'email': 'Email',
             'additional_info': 'Additional Information'
         }
 
         widgets = {
             'guest_name': forms.TextInput(attrs={'placeholder': 'Your Name','class': 'forms-input'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'Your Email Address', 'class': 'forms-input'}),
             'additional_info': forms.Textarea(attrs={'placeholder': 'If you have some special request or additional information, please write it here'}),
         }

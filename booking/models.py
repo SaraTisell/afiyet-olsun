@@ -35,6 +35,7 @@ class Reservation(models.Model):
     reservation_id = ShortUUIDField(primary_key=True, length=6, max_length=6)
     guest = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking_guest")
     guest_name = models.CharField(max_length=50)
+    email = models.EmailField()
     reservation_date = models.DateField()
     reservation_time = models.CharField(max_length=10, choices=RESERVATION_TIME)
     company_size = models.CharField(default=1, choices=COMPANY_SIZE)
