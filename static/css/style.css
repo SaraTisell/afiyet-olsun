@@ -89,12 +89,39 @@ i {
     background-position: center;
     background-repeat: no-repeat;
     height: 600px;
+
 }
 
 #welcome-div {
     background-color: rgb(57, 45, 31, 0.8);
     border: 3px solid #392D1F;
     margin: 50px;
+}
+
+/* Menu page */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+#menu-background {
+    display: block;
+    background-image: url('../img/ao-menu.png');
+    width: 100%;
+    max-width: 600px;
+    margin: 10px 0px 30px;
+    box-shadow: 2px 2px 3px rgb(57, 45, 31, 0.8);
+} 
+
+.menu-text {
+    position: absolute;
+    top: 20%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #040606; 
+    padding: 10px 20px; 
+    font-size: 20px; 
+    text-align: center;
 }
 
 /* Login page */
