@@ -18,6 +18,7 @@
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
                 <button class="btn btn-signup right" type="submit">{% trans 'Logout' %}</button>
+                <a href="{% url 'index' %}">Go Back</a>
             </form>
         </div>
     </div>

@@ -29,11 +29,17 @@ body {
     display: flex;
     flex-direction: column; 
 }
+
 h1 {
     font-size: 20px;
 }
+
 p {
     font-size: 15px;
+}
+
+a {
+    color: #822121;
 }
 /* Delete default margin from bootstrap */
 .row {
@@ -207,15 +213,26 @@ i {
 
 /* Reservations page */
 #reservation-div {
-    background-color: rgb(57, 45, 31, 0.8);
-    border: 3px solid #392D1F;
+    background-color: rgb(130, 33 ,33 , 0.3);
+    border: 6px #822121;
+    border-style: double;
     padding: 15px;
     margin: 50px;
 }
 
-.each-reservation {
-
+.each-reservation a {
+    color: #ffbf00;
 }
+
+/* Update page */
+
+/* Delete page */
+#delete-div {
+    border: 3px solid #392D1F;
+    padding: 10px;
+    margin: 10px;
+}
+
 /* Contact page */
 #contact-div {
     background-color: rgb(57, 45, 31, 0.8);
@@ -331,10 +348,3 @@ i {
     font-weight: 600;
 }
 
-.each-reservation {
-    background-color: #392D1F;
-    color: beige;
-    width: 100%;
-    font-size: 13px;
-    border: 2px solid #822121;
-}

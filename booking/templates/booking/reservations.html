@@ -14,6 +14,7 @@
                 <div class="col-md-3">Time: {{ reservation.reservation_time }}</div>
                 <div class="col-md-3">Guests: {{ reservation.company_size }}</div>
                 <div class="col-md-3"><a href="{% url 'reservation_update' reservation.pk %}">Edit</a> | <a href="{% url 'reservation_delete' reservation.pk %}">Cancel</a></div>
+                <hr>
 
                 {% endfor %}
             </div>
