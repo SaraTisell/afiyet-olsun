@@ -1,4 +1,5 @@
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin 
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect, get_object_or_404, reverse
@@ -44,12 +45,18 @@ class BookingFormView(CreateView):
             return super().form_valid(form)
 
 
-class ViewReservations(ListView):
+class ViewReservations(LoginRequiredMixin, ListView):
     model = Reservation 
     template_name = 'booking/reservations.html'
 
     def get_queryset(self):
-        return Reservation.objects.filter(guest=self.request.user)
+
+        if self.request.user.is_staff:
+            return Reservation.objects.all()
+        else:
+            return Reservation.objects.filter(guest=self.request.user)
+
+  
 
 
 class UpdateReservation(SuccessMessageMixin, UpdateView):
