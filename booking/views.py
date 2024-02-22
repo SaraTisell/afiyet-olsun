@@ -53,13 +53,48 @@ class ViewReservations(ListView):
 
 
 class UpdateReservation(SuccessMessageMixin, UpdateView):
+    """
+    Function to update an existing reservation
+    Using the same logic as in the BookingformView
+    but excludes the current reservation that is getting updated.
+    """
     model = Reservation
     form_class = BookingForm
     template_name = 'booking/update_reservation.html'
     success_url = reverse_lazy('reservations')
     success_message = "Your reservation was successfully Updated!"
 
+    def form_valid(self, form):
+
+        reservation = form.save(commit=False)
+        reservation.guest = self.request.user
+
+        # Check for availability
+        reservation_date = form.cleaned_data['reservation_date']
+        reservation_time = form.cleaned_data['reservation_time']
+
+        # Count how many existing reservations there is on requested date and time
+        # Excluding the reservations that is under editing
+        existing_table_reservation = Reservation.objects.filter(
+            reservation_date=reservation_date,
+            reservation_time=reservation_time).exclude(reservation_id=reservation.reservation_id).count()
+
+        # Checks that there is not 10 existing reservations on the requested date and time
+        if existing_table_reservation == 10:
+            message = f"Sorry the requested {reservation_date} and {reservation_time} is not available. Please try another date and time"
+            messages.error(self.request, message)
+            return super().form_invalid(form)
+
+        else:
+            reservation.save()
+            return super().form_valid(form)
+
+
+
 class DeleteReservation(SuccessMessageMixin, DeleteView):
+    """
+    Function to delete an existing reservation
+    """
     model = Reservation
     template_name = 'booking/delete_reservation_confirm.html'
     success_url = reverse_lazy('reservations')
