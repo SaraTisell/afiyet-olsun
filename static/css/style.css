@@ -99,29 +99,22 @@ i {
 }
 
 /* Menu page */
-.image-container {
-    position: relative;
-    display: inline-block;
+#menu-div {
+    background-color: rgb(130, 33, 33, 0.3);
+    border: 4px solid #822121;
+    color: #AF977A;
+    margin: 10px 0px 30px 0px;
 }
 
-#menu-background {
-    display: block;
-    background-image: url('../img/ao-menu.png');
-    width: 100%;
-    max-width: 600px;
-    margin: 10px 0px 30px;
-    box-shadow: 2px 2px 3px rgb(57, 45, 31, 0.8);
-} 
-
-.menu-text {
-    position: absolute;
-    top: 20%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: #040606; 
-    padding: 10px 20px; 
-    font-size: 20px; 
-    text-align: center;
+#menu-div h1 {
+    font-size: 25px;
+    text-decoration: underline;
+}
+#menu-div h2 {
+    font-size: 20px;
+}
+#menu-div h3 {
+    font-size: 18px;
 }
 
 /* Login page */
