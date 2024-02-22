@@ -6,18 +6,22 @@
 <div class="container-fluid banner">
     <div class="row">
         <div class="col-12 col-md-8 mx-auto text-center" id="welcome-div">
-            <h1>Welcome</h1>
-            <p>text text text text text</p>
-            <p>text text text text text</p>
-            <p>text text text text text</p>
-            <p>text text text text text</p>
-            <button>menu</button>
-            <button>booking</button>
+            <h1>Welcome to Afiyet Olsun</h1>
+            <p>Step into our Turkish restaurant, where every dish is seasoned with love. 
+                <br> Located by the beautiful sea in Malmo's west port, our family-owned eatery is a cozy retreat where flavors mingle with cherished
+                memories. <br> Led by our passionate chef, our kitchen is a place of tradition and warmth. Join us as
+                strangers become friends and laughter fills the air, creating moments that linger long after the last
+                bite. <br> Welcome to our Turkish oasis, where love is the secret ingredient in every recipe. Hoş geldiniz
+            </p>
+            </p>
+            <a href="{% url 'booking' %}" class="btn welcome-button">Make a Reservation</a>
+            <br>
+            <a href="{% url 'menu' %}" class="btn welcome-button" >View Menu</a>
+
+
         </div>
     </div>
 
 </div>
 
 {% endblock %}
-
-

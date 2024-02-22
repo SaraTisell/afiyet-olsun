@@ -29,6 +29,12 @@ body {
     display: flex;
     flex-direction: column; 
 }
+h1 {
+    font-size: 20px;
+}
+p {
+    font-size: 15px;
+}
 /* Delete default margin from bootstrap */
 .row {
     margin: 0;
@@ -96,8 +102,17 @@ i {
     background-color: rgb(57, 45, 31, 0.8);
     border: 3px solid #392D1F;
     margin: 50px;
+    margin-top: 30px;
 }
-
+.welcome-button {
+    background-color: rgb(130, 33, 33, 0.3);
+    padding: 4px 20px;
+    border: 2px solid #822121;
+    font-size: 15px;
+    color: beige;
+    border-radius: 0;
+    margin: 10px;
+}
 /* Menu page */
 #menu-div {
     background-color: rgb(130, 33, 33, 0.3);
