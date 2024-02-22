@@ -1,34 +1,17 @@
-from django.shortcuts import render, redirect
-from django.contrib import messages
+from django.views.generic import CreateView, TemplateView
+from django.urls import reverse_lazy
+#from django.shortcuts import render, redirect
+#from django.contrib import messages
+from .models import ContactRequest
 from .forms import ContactUsForm
 
 
-# Return Thank you page 
-def form_success(request):
-    return render(request, 'contact/contact_success.html')
+class ContactUsView(CreateView):
+    model = ContactRequest
+    form_class = ContactUsForm
+    template_name = 'contact/contact.html'
+    success_url = reverse_lazy('contact_success')
 
 
-def contact_us(request):
-    """
-    View to contact form for users to send a request
-    Account is not mandatory to send a contact request
-    After submission, user is sent to a 'Thank You page'
-    """
-
-    if request.method == "POST":
-        contactus_form = ContactUsForm(data=request.POST)
-        if contactus_form.is_valid():
-            contactus_form.save()
-            return redirect('contact_success')
-            
-
-
-    contactus_form = ContactUsForm()
-
-    return render(
-        request, 
-        "contact/contact.html",
-        {"contactus_form": contactus_form
-
-        },
-    )
+class ContactSuccessView(TemplateView):
+    template_name = 'contact/contact_success.html'

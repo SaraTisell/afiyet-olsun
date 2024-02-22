@@ -13,7 +13,7 @@
                  do not hesitate to contact us!</p>
             <form id="booking-form" method="post">
                 {% csrf_token %}
-                {{ contactus_form | crispy }}
+                {{ form|crispy }}
                 <button id="submitButton" type="submit" class="btn btn-signup btn-lg custom-btn">Submit</button>
             </form>
         </div>
