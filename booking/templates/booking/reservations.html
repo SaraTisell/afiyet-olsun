@@ -6,17 +6,23 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col" id="reservation-div">
-            <h1>Your Reservations</h1>
-            {% for reservation in object_list %}
-            <div class="row each-reservation">
-                <div class="col-md-3">Booking Id: {{ reservation.reservation_id }}</div>
-                <div class="col-md-3">Date: {{ reservation.reservation_date }}</div>
-                <div class="col-md-3">Time: {{ reservation.reservation_time }}</div>
-                <div class="col-md-3">Guests: {{ reservation.company_size }}</div>
-                <div class="col-md-3"><a href="{% url 'reservation_update' reservation.pk %}">Edit</a> | <a href="{% url 'reservation_delete' reservation.pk %}">Cancel</a></div>
-                <hr>
+        {% if object_list %}
+                <h1>Your Reservations</h1>
+                {% for reservation in object_list %}
+                <div class="row each-reservation">
+                    <div class="col-md-3">Booking Id: {{ reservation.reservation_id }}</div>
+                    <div class="col-md-3">Date: {{ reservation.reservation_date }}</div>
+                    <div class="col-md-3">Time: {{ reservation.reservation_time }}</div>
+                    <div class="col-md-3">Guests: {{ reservation.company_size }}</div>
+                    <div class="col-md-3"><a href="{% url 'reservation_update' reservation.pk %}">Edit</a> | <a href="{% url 'reservation_delete' reservation.pk %}">Cancel</a></div>
+                    <hr>
 
                 {% endfor %}
+            {% else %}
+            <h1>No Reservations</h1>
+            <p>You do not have any reservations at the moment, would you like to make one?</p>
+            <a href="{% url 'booking' %}" class="btn welcome-button">Make a Reservation</a>
+        {% endif %}
             </div>
         </div>
     </div>
