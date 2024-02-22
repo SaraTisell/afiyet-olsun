@@ -211,6 +211,11 @@ i {
     margin: 50px;
 }
 
+#imp-text {
+    font-size: 14px;
+    font-style: italic;
+}
+
 /* Reservations page */
 #reservation-div {
     background-color: rgb(130, 33 ,33 , 0.3);

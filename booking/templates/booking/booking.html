@@ -14,7 +14,15 @@
                 <button id="submitButton" type="submit" class="btn btn-signup btn-lg custom-btn">Submit</button>
             </form>
             {% else %}
-            <p>Login to book a table</p>
+            <div class="col-md-8 mx-auto text-center">
+                <h1>Would you like to make a reservation online?</h1>
+                <p>Please <a href="{% url 'account_login' %}">LogIn</a> or <a href="{% url 'account_signup' %}">SignUp</a> <br>
+                </p>
+                <br>
+                <p id="imp-text"><i class="fa-solid fa-circle-exclamation"></i>By having an account at Afiyet Olsun are you able to manage all your reservations in one place, 
+                    <br> without getting in touch with us directly!
+                </p>
+            </div>
             {% endif %}
         </div>
     </div>
