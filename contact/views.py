@@ -1,4 +1,5 @@
 from django.views.generic import CreateView, TemplateView, ListView, DetailView
+from django.contrib.auth.mixins import UserPassesTestMixin 
 from django.urls import reverse_lazy
 from .models import ContactRequest
 from .forms import ContactUsForm
@@ -27,7 +28,7 @@ class ContactInboxStaff(TemplateView):
     template_name = 'contact/inbox.html'
 
 
-class ContactInboxView(ListView):
+class ContactInboxView(UserPassesTestMixin, ListView):
 
     model = ContactRequest
     template_name = 'contact/inbox.html'
@@ -38,8 +39,22 @@ class ContactInboxView(ListView):
         if self.request.user.is_staff:
             return ContactRequest.objects.all()
 
-class ContactDetailsView(DetailView):
+    def test_func(self):
+        """ Test user is staff """
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().guest
+
+class ContactDetailsView(UserPassesTestMixin, DetailView):
 
     model = ContactRequest
     template_name = 'contact/inbox_details.html'
+
+    def test_func(self):
+        """ Test user is staff """
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().guest
     
