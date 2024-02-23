@@ -74,7 +74,7 @@ class UpdateReservation(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     form_class = BookingForm
     template_name = 'booking/update_reservation.html'
     success_url = reverse_lazy('reservations')
-    success_message = "Your reservation was successfully Updated!"
+    success_message = "Reservation was successfully Updated!"
 
     def form_valid(self, form):
 
@@ -116,7 +116,7 @@ class DeleteReservation(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     model = Reservation
     template_name = 'booking/delete_reservation_confirm.html'
     success_url = reverse_lazy('reservations')
-    success_message = "Your reservation was successfully Canceled!"
+    success_message = "Reservation was successfully Canceled!"
 
     def test_func(self):
         """ Test user is staff """
