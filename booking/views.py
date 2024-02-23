@@ -9,7 +9,7 @@ from .models import Reservation
 from .forms import BookingForm
 
 
-class BookingFormView(LoginRequiredMixin, CreateView):
+class BookingFormView(CreateView):
     """
     View to render booking form
     for user to make a reservation
