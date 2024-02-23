@@ -9,7 +9,7 @@ from .models import Reservation
 from .forms import BookingForm
 
 
-class BookingFormView(CreateView):
+class BookingFormView(LoginRequiredMixin, CreateView):
     """
     View to render booking form
     for user to make a reservation
@@ -46,6 +46,11 @@ class BookingFormView(CreateView):
 
 
 class ViewReservations(LoginRequiredMixin, ListView):
+    """
+    View to display existing reservations
+    Own reservations for user
+    All reservations for staff
+    """
     model = Reservation 
     template_name = 'booking/reservations.html'
 
@@ -59,7 +64,7 @@ class ViewReservations(LoginRequiredMixin, ListView):
   
 
 
-class UpdateReservation(SuccessMessageMixin, UpdateView):
+class UpdateReservation(UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     """
     Function to update an existing reservation
     Using the same logic as in the BookingformView
@@ -74,7 +79,6 @@ class UpdateReservation(SuccessMessageMixin, UpdateView):
     def form_valid(self, form):
 
         reservation = form.save(commit=False)
-        reservation.guest = self.request.user
 
         # Check for availability
         reservation_date = form.cleaned_data['reservation_date']
@@ -96,9 +100,16 @@ class UpdateReservation(SuccessMessageMixin, UpdateView):
             reservation.save()
             return super().form_valid(form)
 
+    def test_func(self):
+        """ Test user is staff """
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().guest    
 
 
-class DeleteReservation(SuccessMessageMixin, DeleteView):
+
+class DeleteReservation(UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     """
     Function to delete an existing reservation
     """
@@ -106,3 +117,10 @@ class DeleteReservation(SuccessMessageMixin, DeleteView):
     template_name = 'booking/delete_reservation_confirm.html'
     success_url = reverse_lazy('reservations')
     success_message = "Your reservation was successfully Canceled!"
+
+    def test_func(self):
+        """ Test user is staff """
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().guest
