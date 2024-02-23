@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" id="reservation-div">
+            {% if request.user.is_staff%}
+                <h1>Contact Requests</h1>
+                {% if object_list %}
+                    {% for contactrequest in object_list %}
+                        <div class="row each-reservation">
+                            <div class="col-md-12">Name: {{ contactrequest.name }}</div>
+                            <div class="col-md-12">Subject: {{ contactrequest.title }}</div>
+                            <a href="{% url 'inbox_details' contactrequest.pk %}">Read More</a>
+                            <hr>
+                        </div>
+                    {% endfor %}    
+                {% else %}
+                    <p>No messages</p>
+                {% endif %}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

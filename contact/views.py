@@ -1,4 +1,4 @@
-from django.views.generic import CreateView, TemplateView
+from django.views.generic import CreateView, TemplateView, ListView, DetailView
 from django.urls import reverse_lazy
 from .models import ContactRequest
 from .forms import ContactUsForm
@@ -21,3 +21,25 @@ class ContactSuccessView(TemplateView):
     Renders "Thank you" page after contact form submission
     """
     template_name = 'contact/contact_success.html'
+
+class ContactInboxStaff(TemplateView):
+
+    template_name = 'contact/inbox.html'
+
+
+class ContactInboxView(ListView):
+
+    model = ContactRequest
+    template_name = 'contact/inbox.html'
+    get_success_url = reverse_lazy('inbox')
+
+    def get_queryset(self):
+
+        if self.request.user.is_staff:
+            return ContactRequest.objects.all()
+
+class ContactDetailsView(DetailView):
+
+    model = ContactRequest
+    template_name = 'contact/inbox_details.html'
+    
