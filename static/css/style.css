@@ -1,3 +1,6 @@
+/* Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,400;0,600;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Sacramento&display=swap')
+
 
 /* Override default styles added from browser */
 * {
@@ -27,11 +30,13 @@ body {
     color: beige;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    font-family: "Asap Condensed", sans-serif;
 }
 
 h1 {
     font-size: 20px;
+    font-family: "Libre Baskerville", sans-serif;
 }
 
 p {
@@ -64,6 +69,11 @@ header {
 
 .nav-link {
     color: #AF977A;
+}
+
+.nav-link:hover {
+    color: #822121;
+
 }
 
 #header-logo {
@@ -133,7 +143,7 @@ i {
 
 #menu-div h1 {
     font-size: 25px;
-    text-decoration: underline;
+    font-family: "Sacramento", sans serif;
 }
 #menu-div h2 {
     font-size: 20px;
