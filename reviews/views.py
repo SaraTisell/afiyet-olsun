@@ -38,7 +38,7 @@ class ViewReviews(ListView):
     def get_queryset(self):
         return Review.objects.filter(approved=True)
 
-class UpdateReview(UpdateView):
+class UpdateReview(SuccessMessageMixin, UpdateView):
     """
     Function to update an exisiting review
     """
@@ -49,7 +49,7 @@ class UpdateReview(UpdateView):
     success_message = "Your review was successfully updated!"
 
 
-class DeleteReview(DeleteView):
+class DeleteReview(SuccessMessageMixin, DeleteView):
     """
     Function to delete an existing review
     """
