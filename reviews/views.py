@@ -1,7 +1,10 @@
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.shortcuts import render
 from .models import Review
+from .forms import ReviewForm
 
 class LeaveReviewView(CreateView):
     """
@@ -10,13 +13,16 @@ class LeaveReviewView(CreateView):
     """
     template_name = 'reviews/all_reviews.html'
     form_class = ReviewForm
-    success_url = "/reviews/all_reviews/"
+    success_url = reverse_lazy('all_reviews')
 
     def form_valid(self, form):
 
+        review = form.save(commit=False)
+        review.author = self.request.user
+
         review.save()
         message = f"Your review have ben submitted and waiting for approval"
-        message.success(self.request, message)
+        messages.success(self.request, message)
         return super().form_valid(form)
 
 class ViewReviews(ListView):
@@ -27,7 +33,7 @@ class ViewReviews(ListView):
     template_name = 'reviews/all_reviews.html'
 
     def get_queryset(self):
-        return Review.object.filter(status=1)
+        return Review.objects.filter(status=1)
 
 class UpdateReview(UpdateView):
     """
@@ -36,7 +42,7 @@ class UpdateReview(UpdateView):
     model = Review 
     form_class = ReviewForm
     template_name = 'reviews/all_reviews.html'
-    success_url = reverse_lazy('reviews')
+    success_url = reverse_lazy('all_reviews')
 
 
 class DeleteReview(DeleteView):
