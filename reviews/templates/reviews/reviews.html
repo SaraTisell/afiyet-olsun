@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" id="reservation-div">
+            <h1>Reviews</h1>
+            {% if object_list %}
+                {% for review in object_list %}
+                    <div class="row each-reservation">
+                        <div class="col-md-3">User: {{ review.author }}</div>
+                        <div class="col-md-3">Rating: {{ review.rating }}</div>
+                        <div class="col-md-3">Comment: {{ review.content }}</div>
+                        {% if review.author == user %}                       
+                        <div class="col-md-3"><a href="{% url 'update_review' review.pk %}">Edit</a> | <a href="{% url 'delete_review' review.pk %}">Delete</a></div>
+                        {% endif %}
+                        <hr>
+                    </div>
+                {% endfor %}  
+            {% else %}
+                <h2>Afiyet Olsun does not have any reviews at the moment</h2>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

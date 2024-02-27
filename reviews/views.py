@@ -11,9 +11,10 @@ class LeaveReviewView(CreateView):
     View to render form so
     users can leave reviews
     """
-    template_name = 'reviews/all_reviews.html'
+    model = Review
+    template_name = 'reviews/leave_review.html'
     form_class = ReviewForm
-    success_url = reverse_lazy('all_reviews')
+    success_url = reverse_lazy('reviews')
 
     def form_valid(self, form):
 
@@ -21,19 +22,21 @@ class LeaveReviewView(CreateView):
         review.author = self.request.user
 
         review.save()
-        message = f"Your review have ben submitted and waiting for approval"
+        message = f"Your review have been submitted and waiting for approval"
         messages.success(self.request, message)
         return super().form_valid(form)
 
+
 class ViewReviews(ListView):
     """
-    View to display all exisiting reviews
+    View to display all existing reviews
     """
     model = Review
-    template_name = 'reviews/all_reviews.html'
+    template_name = 'reviews/reviews.html'
+
 
     def get_queryset(self):
-        return Review.objects.filter(status=1)
+        return Review.objects.filter(approved=True)
 
 class UpdateReview(UpdateView):
     """
@@ -41,8 +44,9 @@ class UpdateReview(UpdateView):
     """
     model = Review 
     form_class = ReviewForm
-    template_name = 'reviews/all_reviews.html'
-    success_url = reverse_lazy('all_reviews')
+    template_name = 'reviews/update_review.html'
+    success_url = reverse_lazy('reviews')
+    success_message = "Your review was successfully updated!"
 
 
 class DeleteReview(DeleteView):
@@ -51,5 +55,5 @@ class DeleteReview(DeleteView):
     """
     model = Review
     template_name = 'reviews/delete_review_confirm.html'
-    success_url = reverse_lazy('all_reviews')
+    success_url = reverse_lazy('reviews')
     success_message = "The review was successfully deleted!"
