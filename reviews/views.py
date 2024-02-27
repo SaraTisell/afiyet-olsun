@@ -5,7 +5,8 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.shortcuts import render
 from .models import Review
-from .forms import ReviewForm
+from .forms import ReviewForm, ApproveReviewsForm
+
 
 class LeaveReviewView(CreateView):
     """
@@ -50,6 +51,7 @@ class UpdateReview(SuccessMessageMixin, UpdateView):
     success_message = "Your review was successfully updated!"
 
 
+
 class DeleteReview(SuccessMessageMixin, DeleteView):
     """
     Function to delete an existing review
@@ -60,9 +62,13 @@ class DeleteReview(SuccessMessageMixin, DeleteView):
     success_message = "The review was successfully deleted!"
 
 
+
+
 class ManageReviewsStaff(TemplateView):
 
     template_name = 'reviews/manage_reviews.html'
+
+
 
 class ManageReviewsView(UserPassesTestMixin, ListView):
 
@@ -80,4 +86,16 @@ class ManageReviewsView(UserPassesTestMixin, ListView):
         if self.request.user.is_staff:
             return True
 
-            
+
+class StaffApproveReviews(UserPassesTestMixin, UpdateView):
+
+    model = Review
+    form_class = ApproveReviewsForm
+    template_name = 'reviews/update_review.html'
+    success_url = reverse_lazy('manage_reviews')
+
+    def test_func(self):
+        """ Test user is staff """
+        if self.request.user.is_staff:
+            return True
+
