@@ -1,5 +1,6 @@
-from django.views.generic import CreateView, ListView, UpdateView, DeleteView
+from django.views.generic import CreateView, ListView, UpdateView, DeleteView, TemplateView
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import UserPassesTestMixin 
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.shortcuts import render
@@ -57,3 +58,26 @@ class DeleteReview(SuccessMessageMixin, DeleteView):
     template_name = 'reviews/delete_review_confirm.html'
     success_url = reverse_lazy('reviews')
     success_message = "The review was successfully deleted!"
+
+
+class ManageReviewsStaff(TemplateView):
+
+    template_name = 'reviews/manage_reviews.html'
+
+class ManageReviewsView(UserPassesTestMixin, ListView):
+
+    model = Review
+    template_name = 'reviews/manage_reviews.html'
+    context_object_name = "reviews"
+
+    def get_queryset(self):
+
+        if self.request.user.is_staff:
+            return Review.objects.all()
+
+    def test_func(self):
+        """ Test user is staff """
+        if self.request.user.is_staff:
+            return True
+
+            
