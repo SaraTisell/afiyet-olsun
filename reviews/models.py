@@ -4,8 +4,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 
-STATUS_CHOICE= ((0, "Draft"), (1, "Published"))
-
 # Create your models here.
 class Review(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -17,7 +15,6 @@ class Review(models.Model):
     content = models.TextField(max_length=150)
     created_at = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(choices=STATUS_CHOICE, default=0)
     approved = models.BooleanField(default=False)
 
     class Meta:
