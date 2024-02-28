@@ -41,6 +41,7 @@ h1 {
 
 h2 {
     font-family: "Libre Baskerville", sans-serif;
+    font-size: 16px;
 }
 
 h3 {
@@ -311,6 +312,22 @@ i {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Reviews page */
+#review-div {
+    background-color: rgb(130, 33 ,33 , 0.3);
+    border: 6px #822121;
+    border-style: double;
+    padding: 15px;
+    margin: 10px;
+}
+
+#review-heading {
+    color: #822121;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 10px;
 }
 
 /* Form styles */

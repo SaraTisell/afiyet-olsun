@@ -4,20 +4,22 @@
 
 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col" id="reservation-div">
-            <h1>Reviews</h1>
+        <div class="col-md-6 mx-auto text-center" >
+            <h1 id="review-heading">Reviews</h1>
             {% if object_list %}
                 {% for review in object_list %}
-                    <div class="row each-reservation">
-                        <div class="col-md-3">User: {{ review.author }}</div>
-                        <div class="col-md-3">Rating: {{ review.rating }}</div>
-                        <div class="col-md-3">Comment: {{ review.content }}</div>
+                    <div class="row each-reservation text-start">
+                        <div class="col" id="review-div">User: {{ review.author }} 
+                            <br>Rating: {{ review.rating }} 
+                            <br>Comment: <br> {{ review.content }} 
+                        
                         {% if review.author == user %}                       
-                        <div class="col-md-3"><a href="{% url 'update_review' review.pk %}">Edit</a> | <a href="{% url 'delete_review' review.pk %}">Delete</a></div>
+                        <div class="col"><a href="{% url 'update_review' review.pk %}">Edit</a> | <a href="{% url 'delete_review' review.pk %}">Delete</a></div>
                         {% endif %}
-                        <hr>
+                        </div>
+
                     </div>
                 {% endfor %}  
             {% else %}
