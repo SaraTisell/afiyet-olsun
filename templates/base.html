@@ -124,18 +124,6 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 mb-4 map">
-            <h3>Find Us</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18025.016010853265!2d12.971476661302642!3d55.61720906076313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a41087cdfd33%3A0x8a784deb2901c8b7!2sScaniabadet!5e0!3m2!1ssv!2sse!4v1707561734227!5m2!1ssv!2sse"
-          width="168" height="168" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div class="col-md-3 mb-4 align-item-start contact-info">
-            <h3>Contact Info</h3>
-            <p><i class="fa-solid fa-location-dot"></i> Scaniastreet 45 Malmo, Sweden</p>
-            <p><i class="fa-solid fa-phone"></i> 041 123456</p>
-            <p><i class="fa-solid fa-envelope"></i> Info@afiyetolsun.com</p>
-          </div>
           <div class="col-md-3 mb-4 justify-content-start">
             <h3>Opening Hours</h3>
             <table class="opening-hours">
@@ -170,6 +158,19 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="col-md-3 mb-4 align-item-start">
+            <h3>Quick links</h3>
+            <a href="{% url 'reviews' %}">Reviews</a> <br>
+            <a href="{% url 'booking' %}">Booking</a> <br>
+            <a href="{% url 'menu' %}">Menu</a> <br>
+            <a href="{% url 'index' %}">Home</a><br>
+          </div>
+          <div class="col-md-3 mb-4 align-item-start contact-info">
+            <h3>Contact Info</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Scaniastreet 45 Malmo, Sweden</p>
+            <p><i class="fa-solid fa-phone"></i> 041 123456</p>
+            <p><i class="fa-solid fa-envelope"></i> Info@afiyetolsun.com</p>
           </div>
           <div class="col-md-3 ">
             <img id="footer-logo" src="{% static 'img/logo-ao.webp' %}" alt="Afiyet Olsun Logo" class="img-fluid">
