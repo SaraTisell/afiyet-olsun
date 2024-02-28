@@ -279,6 +279,17 @@ i {
     height: auto;
 }
 
+#map-contact {
+    margin: 30px 0px;
+}
+
+#contact-info-div {
+
+}
+
+iframe {
+    max-width: 100%;
+}
 /* Thank you page */
 .thanks-banner {
     background-image: url('../img/ao-banner-pide.webp');
