@@ -29,6 +29,15 @@ class LeaveReviewView(CreateView):
         messages.success(self.request, message)
         return super().form_valid(form)
 
+class DisplayUserReviews(ListView):
+    """
+    View to display a users reviews
+    """
+    model = Review
+    template_name = 'reviews/user_reviews.html'
+
+    def get_queryset(self):
+        return Review.objects.filter(author=self.request.user)
 
 class ViewReviews(ListView):
     """
@@ -63,7 +72,7 @@ class UpdateReview(SuccessMessageMixin, UpdateView):
         if self.request.user.is_staff:
             return reverse_lazy('manage_reviews')
         else:
-            return reverse_lazy('reviews')
+            return reverse_lazy('user_reviews')
 
 
 class DeleteReview(SuccessMessageMixin, DeleteView):
@@ -72,8 +81,13 @@ class DeleteReview(SuccessMessageMixin, DeleteView):
     """
     model = Review
     template_name = 'reviews/delete_review_confirm.html'
-    success_url = reverse_lazy('reviews')
     success_message = "The review was successfully deleted!"
+
+    def get_success_url(self):
+        if self.request.user.is_staff:
+            return reverse_lazy('manage_reviews')
+        else:
+            return reverse_lazy('user_reviews')
 
 
 class ManageReviewsStaff(TemplateView):

@@ -26,16 +26,17 @@
                                 🥙🥙🥙🥙🥙
                                 {% endif %}</span>
                             <br>Comment: <br> {{ review.content }} 
+                        <!-- Edit and delete option for user who wrote the review -->
+                        {% if review.author == user %}                       
+                        <div class="col"><a href="{% url 'update_review' review.pk %}">Edit</a> | <a href="{% url 'delete_review' review.pk %}">Delete</a></div>
+                        {% endif %}
                         </div>
                     </div>
                 {% endfor %}  
             {% else %}
             <!-- If there is no reviews to display -->
-                <h2>Afiyet Olsun does not have any reviews at the moment</h2>
-            {% endif %}
-            <!-- User can leave reviews -->
-            {% if user.is_authenticated %}
-            <p>Would you like to leave a review? | <a href="{% url 'leave_review' %}">Leave Review</a></p>
+                <h2>You have no reviews yet</h2>
+                <p>Would you like to leave a one? | <a href="{% url 'leave_review' %}">Leave Review</a></p>
             {% endif %}
             </div>
         </div>
