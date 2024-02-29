@@ -1,6 +1,6 @@
 # Afiyet Olsun
 
-![mockup]
+![ao mockup](docs/readme_img/ao-mockup.png)
 
 Afiyet Olsun is a family owned Turkish restaurant located in Malmo, Sweden that offers traditinal Turkish dishes in a cozy and warm environment. 
 The webapplication for Afiyet Olsun allows users and future guests to make table reservations, view the restaurants menu and get in touch with the staff.
