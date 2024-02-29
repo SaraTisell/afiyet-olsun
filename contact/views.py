@@ -1,5 +1,5 @@
 from django.views.generic import CreateView, TemplateView, ListView, DetailView
-from django.contrib.auth.mixins import UserPassesTestMixin 
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.urls import reverse_lazy
 from .models import ContactRequest
 from .forms import ContactUsForm
@@ -22,6 +22,7 @@ class ContactSuccessView(TemplateView):
     Renders "Thank you" page after contact form submission
     """
     template_name = 'contact/contact_success.html'
+
 
 class ContactInboxStaff(TemplateView):
 
@@ -60,4 +61,3 @@ class ContactDetailsView(UserPassesTestMixin, DetailView):
         """ Test user is staff """
         if self.request.user.is_staff:
             return True
-    
