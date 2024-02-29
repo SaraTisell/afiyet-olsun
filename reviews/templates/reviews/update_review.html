@@ -4,29 +4,21 @@
 
 
 {% block content %}
+<!-- Edit reviews form-->
 <div class="container-fluid">
     <div class="row">
         <div class="col" id="reservation-div">
             <h1>Reviews</h1>
             {% if user.is_authenticated %}
-                {% if user.is_staff %}
-                    <form id="approve-reviews-form" method="post">
-                        {% csrf_token %}
-                        {% crispy approve_reviews_form_form %}
-                        <button id="submitButton" type="submit" class="btn btn-signup btn-lg custom-btn">Submit</button>
-                    </form>
-                {% endif %}
-            
-                <form id="approve-reviews-form" method="post">
+                <form id="review-form" method="post">
                     {% csrf_token %}
-                    {% crispy review_form_form %}
+                    {{ form | crispy }}
                     <button id="submitButton" type="submit" class="btn btn-signup btn-lg custom-btn">Submit</button>
-
+                </form>
             {% endif %}
             </div>
         </div>
     </div>
 </div>
-
 
 {% endblock %}

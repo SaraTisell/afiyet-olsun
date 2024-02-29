@@ -3,6 +3,9 @@ from .models import Review
 
 
 class ReviewForm(forms.ModelForm):
+    """
+    Form for users to leave a review
+    """
     class Meta:
         model = Review
         fields = [
@@ -18,8 +21,12 @@ class ReviewForm(forms.ModelForm):
             'content': forms.TextInput(attrs={'placeholder': 'Add Your Comments Here', 'class': 'forms-input'}),
         }
 
+
 class ApproveReviewsForm(forms.ModelForm):
+    """
+    Form for staff to approve reviews
+    """
     class Meta:
         model = Review
-        fields = ['approved']
+        fields = ['approved',]
         labels = {'approved': 'Approved'}

@@ -8,6 +8,7 @@ from .models import Review
 from .forms import ReviewForm, ApproveReviewsForm
 
 
+
 class LeaveReviewView(CreateView):
     """
     View to render form so
@@ -40,16 +41,29 @@ class ViewReviews(ListView):
     def get_queryset(self):
         return Review.objects.filter(approved=True)
 
+
 class UpdateReview(SuccessMessageMixin, UpdateView):
     """
     Function to update an exisiting review
+    Render ApproveReviewForm for staff
+    and ReviewForm for user
     """
     model = Review 
-    form_class = ReviewForm
     template_name = 'reviews/update_review.html'
-    success_url = reverse_lazy('reviews')
-    success_message = "Your review was successfully updated!"
+    success_message = "The review was successfully updated!"
 
+    def get_form_class(self):
+
+        if self.request.user.is_staff:
+            return ApproveReviewsForm
+        else:
+            return ReviewForm
+
+    def get_success_url(self):
+        if self.request.user.is_staff:
+            return reverse_lazy('manage_reviews')
+        else:
+            return reverse_lazy('reviews')
 
 
 class DeleteReview(SuccessMessageMixin, DeleteView):
@@ -62,16 +76,16 @@ class DeleteReview(SuccessMessageMixin, DeleteView):
     success_message = "The review was successfully deleted!"
 
 
-
-
 class ManageReviewsStaff(TemplateView):
 
     template_name = 'reviews/manage_reviews.html'
 
 
-
 class ManageReviewsView(UserPassesTestMixin, ListView):
-
+    """
+    View to render all reviews for staff
+    Approved and not approved
+    """
     model = Review
     template_name = 'reviews/manage_reviews.html'
     context_object_name = "reviews"
@@ -85,17 +99,3 @@ class ManageReviewsView(UserPassesTestMixin, ListView):
         """ Test user is staff """
         if self.request.user.is_staff:
             return True
-
-
-class StaffApproveReviews(UserPassesTestMixin, UpdateView):
-
-    model = Review
-    form_class = ApproveReviewsForm
-    template_name = 'reviews/update_review.html'
-    success_url = reverse_lazy('manage_reviews')
-
-    def test_func(self):
-        """ Test user is staff """
-        if self.request.user.is_staff:
-            return True
-
