@@ -5,5 +5,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('menu/', TemplateView.as_view(template_name='home/menu.html'), name='menu')
+    path(
+        'menu/',
+        TemplateView.as_view(template_name='home/menu.html'), name='menu')
 ]
