@@ -5,7 +5,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col" id="reservation-div">
+        <div class="col base-div">
             {% if request.user.is_staff%}
                 <h1>All Reservations</h1>
                 {% for reservation in object_list %}

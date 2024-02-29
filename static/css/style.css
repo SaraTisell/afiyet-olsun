@@ -56,6 +56,15 @@ a {
     color: #822121;
 }
 
+/* Base layout */
+.base-div {
+    background-color: rgb(130, 33 ,33 , 0.3);
+    border: 6px #822121;
+    border-style: double;
+    padding: 15px;
+    margin: 50px;
+}
+
 /* Delete default margin from bootstrap */
 .row {
     margin: 0;
@@ -229,7 +238,7 @@ i {
 }
 
 /* Booking page */
-#booking-div {
+.booking-div {
     background-color: rgb(57, 45, 31, 0.8);
     border: 3px solid #392D1F;
     padding: 15px;
@@ -241,21 +250,12 @@ i {
     font-style: italic;
 }
 
-/* Reservations page */
-#reservation-div {
-    background-color: rgb(130, 33 ,33 , 0.3);
-    border: 6px #822121;
-    border-style: double;
-    padding: 15px;
-    margin: 50px;
-}
-
 .each-reservation a {
     color: #ffbf00;
 }
 
 /* Delete page */
-#delete-div {
+.delete-div {
     border: 3px solid #392D1F;
     padding: 10px;
     margin: 10px;
@@ -289,9 +289,6 @@ i {
     margin: 30px 0px;
 }
 
-#contact-info-div {
-
-}
 
 iframe {
     max-width: 100%;
@@ -332,7 +329,7 @@ iframe {
 }
 
 /* Reviews page */
-#review-div {
+.review-div {
     background-color: rgb(130, 33 ,33 , 0.3);
     border: 6px #822121;
     border-style: double;
@@ -340,7 +337,7 @@ iframe {
     margin: 10px;
 }
 
-#review-heading {
+.review-heading {
     color: #822121;
     font-weight: bold;
     text-decoration: underline;
