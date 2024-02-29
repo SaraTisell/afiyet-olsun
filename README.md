@@ -53,7 +53,7 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 * Errors trown due to long lines or whitespaces.
 * Fixed and no errors are shown 
 
-![pep8 validator](docs/readme_img/py-linter.ao.png)
+![pep8 validator](docs/readme_img/py-linter-ao.png)
 
 
 ## Deployment
