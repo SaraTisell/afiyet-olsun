@@ -7,11 +7,16 @@ class BookingForm(forms.ModelForm):
     """
     Form so user can make a reservation
     """
-    reservation_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'forms-input','type': 'date', 'min': datetime.now().date()}), label='Date')
+    reservation_date = forms.DateField(widget=forms.DateInput(
+        attrs={
+            'class': 'forms-input',
+            'type': 'date', 'min': datetime.now().date()}), label='Date')
 
-    reservation_time = forms.ChoiceField(choices=RESERVATION_TIME, widget=forms.RadioSelect(), label='Time')
+    reservation_time = forms.ChoiceField(
+        choices=RESERVATION_TIME, widget=forms.RadioSelect(), label='Time')
 
-    company_size = forms.ChoiceField(choices=COMPANY_SIZE, widget=forms.Select, label='Number of Guests')
+    company_size = forms.ChoiceField(
+        choices=COMPANY_SIZE, widget=forms.Select, label='Number of Guests')
 
     class Meta:
         model = Reservation
@@ -31,7 +36,12 @@ class BookingForm(forms.ModelForm):
         }
 
         widgets = {
-            'guest_name': forms.TextInput(attrs={'placeholder': 'Your Name','class': 'forms-input'}),
-            'email': forms.EmailInput(attrs={'placeholder': 'Your Email Address', 'class': 'forms-input'}),
-            'additional_info': forms.Textarea(attrs={'placeholder': 'If you have some special request or additional information, please write it here'}),
+            'guest_name': forms.TextInput(attrs={
+                'placeholder': 'Your Name', 'class': 'forms-input'}),
+            'email': forms.EmailInput(attrs={
+                'placeholder': 'Your Email Address', 'class': 'forms-input'}),
+            'additional_info': forms.Textarea(
+                attrs={
+                    'placeholder': 'If you have some special request or'
+                    'additional information, please write it here'}),
         }
