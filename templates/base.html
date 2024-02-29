@@ -36,6 +36,7 @@
 </head>
 <body>
     <header>
+      <!-- Navigation menu -->
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
             <div class="col-4 d-none d-lg-block">
@@ -95,12 +96,11 @@
               </li>
               {% endif %}
             </ul>
-
-
             </div>
         </div>
       </nav>
     </header>
+
     <!-- Django messages -->
     <div class="container">
       <div class="row">
@@ -122,10 +122,11 @@
 
     
 
-
+<!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="row">
+          <!-- Opening hours -->
           <div class="col-md-3 mb-4 justify-content-start">
             <h3>Opening Hours</h3>
             <table class="opening-hours">
@@ -161,12 +162,18 @@
               </tbody>
             </table>
           </div>
+          <!-- Links to important pages -->
           <div class="col-md-3 mb-4 align-item-start" id="quick-links">
             <h3>Quick links</h3>
-            <a href="{% url 'index' %}">Home</a><br>
             <a href="{% url 'menu' %}">Menu</a> <br>
-            <a href="{% url 'reviews' %}">Reviews</a> <br>
             <a href="{% url 'booking' %}">Booking</a> <br>
+            <a href="{% url 'reviews' %}">Reviews</a> <br>
+            {% if user.is_authenticated %}
+            {% if not user.is_staff %}
+            <a href="{% url 'user_reviews' %}">My Reviews</a> <br>
+            <a href="{% url 'reservations' %}">My Reservations</a> <br>
+            {% endif %}
+            {% endif %}          
           </div>
           <div class="col-md-3 mb-4 align-item-start contact-info">
             <h3>Contact Info</h3>
@@ -174,8 +181,10 @@
             <p><i class="fa-solid fa-phone"></i> 041 123456</p>
             <p><i class="fa-solid fa-envelope"></i> Info@afiyetolsun.com</p>
           </div>
+          <!-- Logotype with link to index/home page -->
           <div class="col-md-3 ">
-            <img id="footer-logo" src="{% static 'img/logo-ao.webp' %}" alt="Afiyet Olsun Logo" class="img-fluid">
+            <a href="{% url 'index' %}"><img id="footer-logo" src="{% static 'img/logo-ao.webp' %}" alt="Afiyet Olsun Logo" class="img-fluid">
+            </a>
         </div>
       </div>
     </footer>
