@@ -30,6 +30,15 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 
 ## Testing
 
+### Code Validation
+#### HTML Validator
+##### W3C HTML Validator
+
+* Errors regarding some stray closing div tags occoured but was removed.
+* Warnings and errors due to the use of Django template snippets.
+
+![wc3 html validator](docs/readme_img/base.w3-ao.png)
+
 ## Deployment
 
 ## Credits
