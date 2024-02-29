@@ -18,7 +18,11 @@ class ReviewForm(forms.ModelForm):
         }
 
         widgets = {
-            'content': forms.TextInput(attrs={'placeholder': 'Add Your Comments Here', 'class': 'forms-input'}),
+            'content': forms.TextInput(
+                attrs={
+                    'placeholder': 'Add Your Comments Here',
+                    'class': 'forms-input'
+                }),
         }
 
 
@@ -28,5 +32,5 @@ class ApproveReviewsForm(forms.ModelForm):
     """
     class Meta:
         model = Review
-        fields = ['approved',]
+        fields = ['approved', ]
         labels = {'approved': 'Approved'}
