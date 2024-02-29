@@ -4,6 +4,7 @@
 
 
 {% block content %}
+<!-- Display approved reviews for users -->
 <div class="container">
     <div class="row">
         <div class="col-md-6 mx-auto text-center" >
@@ -11,23 +12,34 @@
             {% if object_list %}
                 {% for review in object_list %}
                     <div class="row each-reservation text-start">
-                        <div class="col" id="review-div">User: {{ review.author }} 
-                            <br>Rating: {{ review.rating }} 
+                        <div class="col" id="review-div">
+                            <span>User: {{ review.author }} 
+                                {% if review.rating == 1 %}
+                                🥙🫓🫓🫓🫓
+                                {% elif review.rating == 2 %}
+                                🥙🥙🫓🫓🫓
+                                {% elif review.rating == 3 %}
+                                🥙🥙🥙🫓🫓
+                                {% elif review.rating == 4 %}
+                                🥙🥙🥙🥙🫓
+                                {% elif review.rating == 5 %}
+                                🥙🥙🥙🥙🥙
+                                {% endif %}</span>
                             <br>Comment: <br> {{ review.content }} 
-                        
+                        <!-- Edit and delete option for user who wrote the review -->
                         {% if review.author == user %}                       
                         <div class="col"><a href="{% url 'update_review' review.pk %}">Edit</a> | <a href="{% url 'delete_review' review.pk %}">Delete</a></div>
                         {% endif %}
                         </div>
-
                     </div>
                 {% endfor %}  
             {% else %}
+            <!-- If there is no reviews to display -->
                 <h2>Afiyet Olsun does not have any reviews at the moment</h2>
             {% endif %}
+            <!-- User can leave reviews -->
             {% if user.is_authenticated %}
             <p>Would you like to leave a review? | <a href="{% url 'leave_review' %}">Leave Review</a></p>
-            
             {% endif %}
             </div>
         </div>
