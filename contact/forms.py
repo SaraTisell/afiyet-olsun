@@ -5,6 +5,9 @@ from datetime import datetime
 
 
 class ContactUsForm(forms.ModelForm):
+    """
+    Contact form so user can send a contact request
+    """
 
     class Meta:
         model = ContactRequest

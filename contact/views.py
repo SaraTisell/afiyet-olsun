@@ -29,6 +29,9 @@ class ContactInboxStaff(TemplateView):
 
 
 class ContactInboxView(UserPassesTestMixin, ListView):
+    """
+    View for staff to see contact requests
+    """
 
     model = ContactRequest
     template_name = 'contact/inbox.html'
@@ -47,6 +50,9 @@ class ContactInboxView(UserPassesTestMixin, ListView):
             return self.request.user == self.get_object().guest
 
 class ContactDetailsView(UserPassesTestMixin, DetailView):
+    """
+    View for staff to se details of the contact requests
+    """
 
     model = ContactRequest
     template_name = 'contact/inbox_details.html'

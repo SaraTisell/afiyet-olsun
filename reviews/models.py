@@ -3,9 +3,10 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
-
-# Create your models here.
 class Review(models.Model):
+    """
+    Model for reviews
+    """
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     rating = models.IntegerField(default=1,
         validators=[
