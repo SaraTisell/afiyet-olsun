@@ -1,12 +1,17 @@
-from django.views.generic import CreateView, ListView, UpdateView, DeleteView, TemplateView
+from django.views.generic import (
+    CreateView,
+    ListView,
+    UpdateView,
+    DeleteView,
+    TemplateView
+    )
 from django.urls import reverse_lazy
-from django.contrib.auth.mixins import UserPassesTestMixin 
+from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.shortcuts import render
 from .models import Review
 from .forms import ReviewForm, ApproveReviewsForm
-
 
 
 class LeaveReviewView(CreateView):
@@ -29,6 +34,7 @@ class LeaveReviewView(CreateView):
         messages.success(self.request, message)
         return super().form_valid(form)
 
+
 class DisplayUserReviews(ListView):
     """
     View to display a users reviews
@@ -39,13 +45,13 @@ class DisplayUserReviews(ListView):
     def get_queryset(self):
         return Review.objects.filter(author=self.request.user)
 
+
 class ViewReviews(ListView):
     """
     View to display all existing reviews
     """
     model = Review
     template_name = 'reviews/reviews.html'
-
 
     def get_queryset(self):
         return Review.objects.filter(approved=True)
@@ -57,7 +63,7 @@ class UpdateReview(SuccessMessageMixin, UpdateView):
     Render ApproveReviewForm for staff
     and ReviewForm for user
     """
-    model = Review 
+    model = Review
     template_name = 'reviews/update_review.html'
     success_message = "The review was successfully updated!"
 
