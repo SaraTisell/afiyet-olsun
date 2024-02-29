@@ -55,6 +55,23 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
   * Used to add fonts
 
 
+** External Python Modules **
+* asgiref==3.7.2
+* crispy-bootstrap5==0.7
+* dj-database-url==0.5.0
+* Django==4.2.10
+* django-allauth==0.57.2
+* django-crispy-forms==2.1
+* gunicorn==20.1.0
+* oauthlib==3.2.2
+* psycopg2==2.9.9
+* PyJWT==2.8.0
+* python3-openid==3.2.0
+* requests-oauthlib==1.3.1
+* shortuuid==1.0.11
+* sqlparse==0.4.4
+* whitenoise==5.3.0
+
 ## Testing
 
 ### Code Validation
