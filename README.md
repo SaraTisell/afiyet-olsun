@@ -31,6 +31,7 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 ## Testing
 
 ### Code Validation
+
 #### HTML Validator
 ##### W3C HTML Validator
 
@@ -39,7 +40,8 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 
 ![wc3 html validator](docs/readme_img/base.w3-ao.png)
 
-#### W3C CSS Validation
+#### CSS Validator
+##### W3C CSS Validation
 
 * No errors were found in the CSS file
 
