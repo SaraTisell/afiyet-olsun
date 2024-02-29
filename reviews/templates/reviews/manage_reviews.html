@@ -8,42 +8,41 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col base-div">
-                <h1>All Reviews</h1>
-                {% if object_list %}
-                    {% for review in object_list %}
-                        <div class="row each-reservation">
-                            <div class="col-md-3">User: {{ review.author }}</div>
-                            <div class="col-md-3"> 
-                                {% if review.rating == 1 %}
-                                🥙🫓🫓🫓🫓
-                                {% elif review.rating == 2 %}
-                                🥙🥙🫓🫓🫓
-                                {% elif review.rating == 3 %}
-                                🥙🥙🥙🫓🫓
-                                {% elif review.rating == 4 %}
-                                🥙🥙🥙🥙🫓
-                                {% elif review.rating == 5 %}
-                                🥙🥙🥙🥙🥙
-                                {% endif %}
-                            </div>
-                            <div class="col-md-3">Comment: {{ review.content }}</div>
-                            <div class="col-md-3">Approved:
-                                {% if review.approved %}
-                                    <p>✅</p>
-                                {% else %}
-                                <p>⬜</p>
-                                {% endif %}
-                            </div>
-                            <!-- Option to approve an submitted review and delete an existing review-->
-                            <div class="col-md-3"><a href="{% url 'update_review' review.pk %}">Approve</a> | <a href="{% url 'delete_review' review.pk %}">Delete</a></div>
-                        <hr>
-                        </div>
-                    {% endfor %}  
-                {% endif %}
+            <h1>All Reviews</h1>
+            {% if object_list %}
+            {% for review in object_list %}
+            <div class="row each-reservation">
+                <div class="col-md-3">User: {{ review.author }}</div>
+                <div class="col-md-3">
+                    {% if review.rating == 1 %}
+                    🥙🫓🫓🫓🫓
+                    {% elif review.rating == 2 %}
+                    🥙🥙🫓🫓🫓
+                    {% elif review.rating == 3 %}
+                    🥙🥙🥙🫓🫓
+                    {% elif review.rating == 4 %}
+                    🥙🥙🥙🥙🫓
+                    {% elif review.rating == 5 %}
+                    🥙🥙🥙🥙🥙
+                    {% endif %}
+                </div>
+                <div class="col-md-3">Comment: {{ review.content }}</div>
+                <div class="col-md-3">Approved:
+                    {% if review.approved %}
+                    <p>✅</p>
+                    {% else %}
+                    <p>⬜</p>
+                    {% endif %}
+                </div>
+                <!-- Option to approve an submitted review and delete an existing review-->
+                <div class="col-md-3"><a href="{% url 'update_review' review.pk %}">Approve</a> | <a
+                        href="{% url 'delete_review' review.pk %}">Delete</a></div>
+                <hr>
             </div>
+            {% endfor %}
+            {% endif %}
         </div>
     </div>
 </div>
-
 
 {% endblock %}
