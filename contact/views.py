@@ -46,8 +46,7 @@ class ContactInboxView(UserPassesTestMixin, ListView):
         """ Test user is staff """
         if self.request.user.is_staff:
             return True
-        else:
-            return self.request.user == self.get_object().guest
+
 
 class ContactDetailsView(UserPassesTestMixin, DetailView):
     """
@@ -61,6 +60,4 @@ class ContactDetailsView(UserPassesTestMixin, DetailView):
         """ Test user is staff """
         if self.request.user.is_staff:
             return True
-        else:
-            return self.request.user == self.get_object().guest
     
