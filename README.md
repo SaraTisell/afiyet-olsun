@@ -47,6 +47,15 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 
 ![w3c css validator](docs/readme_img/w3c-css-ao.png)
 
+#### Python Validation
+##### PEP8 CI Python Linter
+
+* Errors trown due to long lines or whitespaces.
+* Fixed and no errors are shown 
+
+![pep8 validator](docs/readme_img/py-linter.ao.png)
+
+
 ## Deployment
 
 ## Credits
