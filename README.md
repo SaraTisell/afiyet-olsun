@@ -27,6 +27,33 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 * Future Features
 
 ## Technologies Used
+* HTML
+  * Website structure was developed using HTML as the main language
+* CSS
+  * Custom CSS in an external file to style the website
+* Python 
+  * Python was the main programming language for application using The Django Framework
+* GitPod
+  * Gitpod IDE was used to develope the website
+* GitHub
+  * Githud is used to host source code
+* Git
+  * Used to commit and push code from GitPod to GitHub during development of the website
+* Canva
+  * Was used to design logotype, favicon & ERD's
+* Balsamiq
+  * Was used to create wireframes
+* Favicon.io
+  * Was used to create favicon
+* RapidTables
+  * Was used to convert HEX colors to RGB
+* Pixelied
+  * Used to convert png to webp
+* Font Awesome
+  * Used to implement icons
+* Google Fonts
+  * Used to add fonts
+
 
 ## Testing
 
@@ -54,14 +81,13 @@ CSS code were validated through W3C CSS Validation Service by direct input.
 When validating css by URI several errors and warnings occoured, this is identifyed to Bootstrap which is used in Afiyet Olsun Project.
 
 
-
 #### Python Validation
 ##### PEP8 CI Python Linter
 
 All python file's were validated through CI Python Linter.
 
 * Errors trown due to long lines or whitespaces.
-    * Fixed and no errors are shown 
+  * Fixed and no errors are shown 
 
 ![pep8 validator](docs/readme_img/py-linter-ao.png)
 
