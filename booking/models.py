@@ -46,6 +46,6 @@ class Reservation(models.Model):
         ordering = ['reservation_date', 'reservation_time']
 
     def __str__(self):
-        return f'{self.reservation_id} -'
-        f'{self.guest_name} - {self.reservation_date} -'
-        f'{self.reservation_time}'
+        return (f'{self.reservation_id} -'
+                f'{self.guest_name} - {self.reservation_date} -'
+                f'{self.reservation_time}')
