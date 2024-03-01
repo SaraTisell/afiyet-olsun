@@ -44,7 +44,7 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 **User nav menu**
 ![user menu](docs/readme_img/user-menu-ao.png)
 
-* Visible for users who have an account
+* Visible for users who have an regular account
 * Contains links to
   * Home
   * Menu
@@ -52,6 +52,19 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
   * Reservations
   * Logout
   * Contact
+
+**Staff nav menu**
+![staff menu](docs/readme_img/staff-menu-ao.png)
+
+* Vivible for staff members
+* Contains links to
+  * Home
+  * Menu
+  * Booking (Booking Form)
+  * Reservations
+  * Inbox
+  * Reviews
+  * Logout
 
 
 
