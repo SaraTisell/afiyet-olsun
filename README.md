@@ -108,6 +108,26 @@ All python file's were validated through CI Python Linter.
 
 ![pep8 validator](docs/readme_img/py-linter-ao.png)
 
+### Feature Testing
+
+#### Navigation
+![nav test](docs/readme_img/nav-test-ao.png)
+
+#### Account Testing
+![account test](docs/readme_img/account-test-ao.png)
+
+#### Contact Testing
+![contact test](docs/readme_img/contact-test-ao.png)
+
+#### Booking Testing
+![booking test](docs/readme_img/booking-test-ao.png)
+
+#### Reservations Testing
+![reservation test](docs/readme_img/reservation-test-ao.png)
+
+#### Review Testing
+![review test](docs/readme_img/review-test-ao.png)
+
 
 ## Deployment
 
