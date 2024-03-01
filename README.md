@@ -70,13 +70,13 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 
 ![home page](docs/readme_img/home-ao.png)
 
-The homepage contains a **Welcome Text* for the user with a short description about the restaurant with butoons to take the user to **Make a Reservation* or **View the Menu*
+The homepage contains a **Welcome Text* for the user with a short description about the restaurant with butoons to take the user to *Make a Reservation* or *View the Menu*
 
 #### Footer
 
 ![Footer](docs/readme_img/footer-ao.png)
 
-The footer contains **Opening Hours* **Quick Links* **Contact Info* and **Afiyet Olsun's Logo*.
+The footer contains *Opening Hours* *Quick Links* *Contact Info* and *Afiyet Olsun's Logo*.
 
 * Afiyet Olsun Logo
   * Is clickable and redirect the user to the Home Page
@@ -90,7 +90,7 @@ The footer contains **Opening Hours* **Quick Links* **Contact Info* and **Afiyet
 
 ![quick links](docs/readme_img/quick-links-user-ao.png)
 
-For a user with a regular account links to **My Reviews* and **My Reservation* is visible.
+For a user with a regular account links to *My Reviews* and *My Reservation* is visible.
 
 
 
