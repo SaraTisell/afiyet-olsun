@@ -87,6 +87,7 @@ The footer contains **Opening Hours* **Quick Links* **Contact Info* and **Afiyet
   * Reviews
 
 **Quick Links for user with regular account**
+
 ![quick links](docs/readme_img/quick-links-user-ao.png)
 
 For a user with a regular account links to **My Reviews* and **My Reservation* is visible.
