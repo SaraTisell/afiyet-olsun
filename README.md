@@ -25,7 +25,26 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 ## Agile
 
 ## Features
-* Existing Features
+**Existing Features**
+
+#### Navigation Menu
+
+**Default nav menu**
+![default menu](docs/readme_img/default-menu-ao.png)
+
+* Visible for all visitors on the website
+* Contains links to
+  * Home
+  * Menu
+  * Booking
+  * Login
+  * Signup
+  * Contact
+
+
+
+
+
 * Future Features
 
 ## Technologies Used
