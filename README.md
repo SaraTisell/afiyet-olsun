@@ -556,6 +556,25 @@ All python file's were validated through CI Python Linter.
 
 ## Deployment
 
+* Make your code repo ready for deployment
+  * Set DEBUG = False
+  * Commit and push code to GitHub
+* Navigate to Heroku and login
+* From Heroku dashboard, create a new app
+  * Select region
+  * Giv you app a unique name
+* Navigate to settings tab and click reveal config vars
+* Add Following config vars:
+  * SECRET_KEY
+  * DATABASE_URL
+* Click on deploy tab and connect to github
+  * Search for repo and click on the one you want to deploy
+* Scroll down to manual deploy
+  * Select (main) branch
+* Click Deploy Branch
+* Open app to view the live site
+
+
 ## Credits
 
 ## Acknowledgements
