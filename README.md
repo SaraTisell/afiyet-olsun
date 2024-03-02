@@ -146,7 +146,7 @@ ERD's was made to design the database and the relation between the tables.
 
 <details>
 <summary>ERD Final</summary>
-![final erd](docs/readme_img/agile_cupid_rover_958701%20-%20public.png)
+<img src="docs/readme_img/agile_cupid_rover_958701 - public.png">
 </details>
 
 
