@@ -117,8 +117,17 @@ These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **
 * Development: Performence and responsiveness testing
   * As a developer I must test the responsiveness and perfomence of the web application to ensure optimal user experience.
 
+### Milestone 8 - Deployment final Heroku
+#### EPIC 8 - Heroku deployment
+##### Tasks/Stories
+* Development: Final deployment
+  * As a developer I must make one final deployment to heroku so my users can access the live site.
 
-
+### Milestone 9 - Deocumentation
+#### EPIC 9 - Project Documentation
+##### Tasks/Stories
+* Development: Readme 
+  * As a developer I must write a clear and descriptive readme about the project.
 
 
 
