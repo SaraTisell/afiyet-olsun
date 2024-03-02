@@ -90,8 +90,22 @@ These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **
   * As a site user I can cancel my table reservation so that I can notify the restaurant that the reservation is no longer needed due to changed plans
 * USER STORY: Send special request
   * As a site user I can send a special request so that I can ask the restaurant if they can fullfill my request.
-  
 
+### Milestone 6 - Reviews & Rating system
+#### EPIC 6 - Review management
+##### Tasks/Stories
+* Development: Review & rating feature 
+  * As a developer I must develope a review and rating feature so the users can leave & read reviews.
+* USER STORY Admin: Manage reviews
+  * As a site admin I can view site users rewievs so that I can approve them or delete them.
+* USER STORY: View reviews
+  * As a site user I can see reviews from previous guests so that I can read about the dining experience and form an opinion about the restaurant.
+* USER STORY: Leave reviews 
+  * As a site user I can leave reviews so that I can share my dining experience.
+* USER STORY: Edit rewievs
+  * As a site user I can edit my rewievs so that I can change my opinion or correct a typo.
+* USER STORY: Delete rewievs 
+  * As a site user I can delete my rewievs so that I can remove outdated and inaccurate feedback.
 
 
 
