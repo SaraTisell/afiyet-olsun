@@ -43,8 +43,21 @@ These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **
 * Development: Entity-Relationship Diagrams
   * As a developer I need to create ERD's for my database to define requirements.
 
-
-
+### Milestone 3 - Base setup
+#### EPIC 3 - Frontend & backend development
+##### Tasks/Stories
+* Development: Create new application
+  * As a developer I must create a new repo and install necessary dependencies so that I can start to build the new web application.
+* Development: First deployment
+  * As a developer I must make an early deploy to heroku so that I can test my application during the development stage.
+* Development: Backend
+  * As a developer I must develope backend functionallity for the web application to handle user authentication & data management.
+* Development: Frontend
+  * As a developer I must implement user interface (UI) components based on wireframes to increase the user experience of the web application.
+* USER STORY: Contact information 
+  * As a site user I can view contact information so that I can reach out to the restaurant.
+* USER STORY: View menu
+  * As a site user I can view the restaurants menu so that I can see in advance that the food/drinks they offering is suitable.
 
 
 
