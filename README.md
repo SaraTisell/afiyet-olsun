@@ -252,6 +252,19 @@ The user is able to edit or delete their review.
 
 ![users reviews](docs/readme_img/users-review-ao.png)
 
+**If the user does not have any reviews and navigates to *My Reviews* page**
+
+![no own reviews user](docs/readme_img/no-reviews-user-ao.png)
+
+
+**Manage reviews staff**
+
+Staff can manage reviews by navigate and click on *Reviews* in the header nav menu. The staff is able to approve or delete the review.
+
+![staff reviews](docs/readme_img/staff-reviews.png)
+
+![approve reviews](docs/readme_img/staff-approved-ao.png)
+
 * Future Features
 
 ## Technologies Used
