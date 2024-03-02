@@ -208,11 +208,25 @@ Any user that visits the website is able to send a Contact Request through the c
 ![contact form](docs/readme_img/contact-ao.png)
 
 **View Contact Requests**
-Staff members are able to view all contact requests at the *Inbox* page. The name and subject of from the contact request form is visible and the staff member can click on *Read more* to see email and message.
+
+Staff members are able to view all contact requests at the *Inbox* page. The name and subject of the contact request form is visible and the staff member can click on *Read more* to see email and message.
 
 ![inbox](docs/readme_img/inbox-ao.png)
 
 ![inbox details](docs/readme_img/inbox-detail-ao.png)
+
+#### Reviews
+
+Users with account are able to leave reviews with a rating score and a comment.
+
+*Rating score is 1 -5 and are displayed with icons*
+🥙/🫓
+*For each score one filled flatbread "🥙" is increased.*
+ *Example:*
+ *ratings score 3/5 will be displayed as "🥙🥙🥙🫓🫓"*
+
+
+![no reviews](docs/readme_img/no-reviews-default-ao.png)
 
 
 
