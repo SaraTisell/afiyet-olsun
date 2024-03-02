@@ -149,9 +149,6 @@ ERD's was made to design the database and the relation between the tables.
 <img src="docs/readme_img/agile_cupid_rover_958701 - public.png">
 </details>
 
-
-
-
 ## Features
 ### Existing Features
 
@@ -405,6 +402,16 @@ any user that visits the website is able to view the food *Menu* where dishes an
 ### Logotype
 
 ![afiyet olsun logotype](docs/readme_img/ao-logo-readme.png)
+
+#### Favicon 
+
+![ao favicon](docs/readme_img/fav-icon-ao-readme.png)
+
+### Color Scheme
+
+![ao color scheme](docs/readme_img/ao-color-scheme%20.png)
+
+
 
 
 
