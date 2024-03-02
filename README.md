@@ -411,6 +411,21 @@ any user that visits the website is able to view the food *Menu* where dishes an
 
 ![ao color scheme](docs/readme_img/ao-color-scheme%20.png)
 
+### Wireframes
+
+Wireframes was made to demonstrate the design of the website with colors and layout. During the development the design was improved to provide a better user-experience.
+
+**Desktop**
+
+![desktop](docs/readme_img/wireframe-desktop-ao.png)
+
+**Tablet**
+
+![tablet](docs/readme_img/wireframe-tab-ao.png)
+
+**Mobile**
+
+![mobile](docs/readme_img/wireframe-mobile-ao.png)
 
 
 
