@@ -401,7 +401,7 @@ any user that visits the website is able to view the food *Menu* where dishes an
 
 ### Logotype
 
-![afiyet olsun logotype](docs/readme_img/ao-logo-readme.png)
+![afiyet olsun logotype](docs/readme_img/logo-ao-readme.png)
 
 #### Favicon 
 
