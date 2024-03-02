@@ -480,6 +480,16 @@ Wireframes was made to demonstrate the design of the website with colors and lay
 
 ### Responsiveness & Performence
 
+Website is responsive from 280px. Several devices has been tested with help from Google Tools
+
+* Samsung Galaxy fold
+* Iphone 12 PRO
+* Samsung Galaxy s8+
+
+* IPad Air
+* Surface Duo
+* Galaxy Tab s4
+
 #### Lighthouse testing
 
 ![lighthouse desktop](docs/readme_img/lighthouse-ao-desktop.png)
