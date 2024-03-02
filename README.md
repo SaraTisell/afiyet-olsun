@@ -135,14 +135,16 @@ A user must have an account to be able to make a Resrvation at the website
 
 When a user that is not logged in navigates to the *Booking Page* they are asked to Login or Signup.
   * Links to *Login* & *Signup* 
+
 Info text with benefits for having an account at Afiyet Olsun is displayed.
 
 **Booking page for user / staff with account**
 
 ![booking form](docs/readme_img/bookingform-ao.png)
 
-A user or staff member can make a reservtion by fill in the form with valid information
-The field includes:
+A user or staff member can make a reservtion by fill in the form with valid information.
+
+The fields:
 * Name
 * Email
 * Date 
@@ -151,7 +153,7 @@ The field includes:
 * Additional info (optional)
 * Submit button
 
-
+A staff member is able to make a reservation on the behalf of a guest that does not have an account at Afiyet Olsun.
 
 
 
