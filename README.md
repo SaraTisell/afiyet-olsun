@@ -59,8 +59,15 @@ These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **
 * USER STORY: View menu
   * As a site user I can view the restaurants menu so that I can see in advance that the food/drinks they offering is suitable.
 
-
-
+### Milestone 4 - User authentication
+#### EPIC 4 - User account management
+##### Tasks/Stories
+* Development: Allauth
+  * As a developer I must implement allauth so that the users can register for an account and use the web applications features.
+* USER STORY: Account registration 
+  * As a site user I can register an account so that I can manage my reservations and reviews.
+* USER STORY: Login / Logout
+  * As a site user I can login and logout from my account so that I can manage my bookings/rewievs and then logout when I am done.
 
 
 
