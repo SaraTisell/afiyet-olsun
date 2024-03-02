@@ -108,17 +108,24 @@ User are able to create an account by navigate to *Signup* and fill in fields fo
 
 ![login](docs/readme_img/login-ao.png)
 
-User log in with:
+Users are able to login with:
 * Username
 * Password
 
+Message that the user has logged in
+
+![login message](docs/readme_img/login-message.png)
+
 **Logout**
+
 ![logout](docs/readme_img/logout-ao.png)
 
 A user can logout by click on *Logout* in nav menu and, they are redirected to a logout page where they can confirm logout or go back to Home Page.
 If they confirm logout, they are redirected to Home Page with a message.
 
 ![logout message](docs/readme_img/confirm-logout-ao.png)
+
+
 
 
 
