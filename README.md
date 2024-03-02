@@ -171,10 +171,36 @@ If a user does not have any reservations they are asked if they would like to ma
 ![no reservation](docs/readme_img/no-reservations-ao.png)
 
 **Existing Reservations**
-If a user has reservations these will be displayed as a list at the *Reservation* page
-The user is able to edit their reservation or cansle their reservation by click one of the links under the reservation
+If a user has reservations these will be displayed as a list at the *Reservation* page.
+The user is able to edit their reservation or cancel their reservation by click one of the links under the reservation.
 
 ![user reservations](docs/readme_img/user-reservation-ao.png)
+
+**Staff members**
+
+A staff meber can see all exisiting reservations by navigate to the *Reservations* page.
+Staff is able to edit or cancel any reservation by click one of the links under the reservation.
+
+![staff reservations](docs/readme_img/staff-reservations-ao.png)
+
+
+**Edit Reservation**
+
+If a user or a staff member waht to edit an reservation they are redirected to the update reservation page where they can change infromation in desired field and resubmit the form.
+![update reservation](docs/readme_img/update-reservation-ao.png)
+
+A success message that the reservation has been updated will be displayed and the user/staff is redirected back to the *Reservations* page.
+
+![success update reservation](docs/readme_img/success-message-ao.png)
+
+If a user or staff member want to cancel an reservation they are redirected to a delete page where they have to confirm the cancelation of the reservation.
+
+![confim delete reservation](docs/readme_img/confirm-delete-reservation-ao.png)
+
+When a reservation is canceled the user/staff is redirected to the *Reservations* page and a success message is displayed.
+![cancel message](docs/readme_img/cancel-message-ao.png)
+
+
 
 * Future Features
 
