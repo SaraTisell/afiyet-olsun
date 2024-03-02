@@ -92,7 +92,28 @@ The footer contains *Opening Hours* *Quick Links* *Contact Info* and *Afiyet Ols
 
 For a user with a regular account links to *My Reviews* and *My Reservation* is visible.
 
+#### Signup, Login, Logout
 
+![signup](docs/readme_img/signup-ao.png)
+
+User are able to create an account by navigate to *Signup* and fill in fields for:
+* Username
+* Email (Optional)
+* Password
+* Password Validation
+
+![login](docs/readme_img/login-ao.png)
+
+User log in with:
+* Username
+* Password
+
+![logout](docs/readme_img/logout-ao.png)
+
+A user can logout by click on *Logout* in nav menu and, they are redirected to a logout page where they can confirm logout or go back to Home Page.
+If they confirm logout, they are redirected to Home Page with a message.
+
+![logout message](docs/readme_img/confirm-logout-ao.png)
 
 
 
