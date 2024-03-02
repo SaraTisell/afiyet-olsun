@@ -478,6 +478,17 @@ Wireframes was made to demonstrate the design of the website with colors and lay
 
 ## Testing
 
+### Responsiveness & Performence
+
+#### Lighthouse testing
+
+![lighthouse desktop](docs/readme_img/lighthouse-ao-desktop.png)
+
+![lighthouse mobile](docs/readme_img/lighthouse-ao-mobile.png)
+![lighthouse mobile](docs/readme_img/lighthouse-mobile-two.png)
+
+Performance for mobile is a little low, several tests were run and some increasment occurred but this is a future improvement that should be done.
+
 ### Code Validation
 
 #### HTML Validator
