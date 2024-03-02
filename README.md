@@ -178,7 +178,7 @@ The user is able to edit their reservation or cancel their reservation by click 
 
 **Staff members**
 
-A staff meber can see all exisiting reservations by navigate to the *Reservations* page.
+A staff member can see all exisiting reservations by navigate to the *Reservations* page.
 Staff is able to edit or cancel any reservation by click one of the links under the reservation.
 
 ![staff reservations](docs/readme_img/staff-reservations-ao.png)
@@ -186,7 +186,7 @@ Staff is able to edit or cancel any reservation by click one of the links under 
 
 **Edit Reservation**
 
-If a user or a staff member waht to edit an reservation they are redirected to the update reservation page where they can change infromation in desired field and resubmit the form.
+If a user or a staff member want to edit an reservation they are redirected to the update reservation page where they can change infromation in desired field and resubmit the form.
 ![update reservation](docs/readme_img/update-reservation-ao.png)
 
 A success message that the reservation has been updated will be displayed and the user/staff is redirected back to the *Reservations* page.
@@ -199,6 +199,21 @@ If a user or staff member want to cancel an reservation they are redirected to a
 
 When a reservation is canceled the user/staff is redirected to the *Reservations* page and a success message is displayed.
 ![cancel message](docs/readme_img/cancel-message-ao.png)
+
+
+#### Contact
+
+Any user that visits the website is able to send a Contact Request through the contact from at the *Contact* page. 
+
+![contact form](docs/readme_img/contact-ao.png)
+
+**View Contact Requests**
+Staff members are able to view all contact requests at the *Inbox* page. The name and subject of from the contact request form is visible and the staff member can click on *Read more* to see email and message.
+
+![inbox](docs/readme_img/inbox-ao.png)
+
+![inbox details](docs/readme_img/inbox-detail-ao.png)
+
 
 
 
