@@ -265,6 +265,14 @@ Staff can manage reviews by navigate and click on *Reviews* in the header nav me
 
 ![approve reviews](docs/readme_img/staff-approved-ao.png)
 
+
+#### Food Menu
+
+any user that visits the website is able to view the food *Menu* where dishes and prices is displayed.
+
+![food menu](docs/readme_img/food-menu-ao.png)
+
+
 * Future Features
 
 ## Technologies Used
