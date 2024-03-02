@@ -11,6 +11,30 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 ## Overview
 
 ## User Experience Design
+
+## Agile Methodology
+
+[Project **Afiyet Olsun** Kanban Board](https://github.com/users/SaraTisell/projects/5)
+
+Agile was used for effective planning and development of the website.
+
+9 Milestones was created where each had EPIC's related to them and every EPIC had tasks that needed to be completed. 
+These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **Development**
+
+### Milestone 1 - Design & Prototype
+#### EPIC 1 - Create user-centric design and prototype
+##### Tasks/Stories
+* Development: Logotype
+  * As a developer I need to design a logotype for brand recognition.
+* Development: Color scheme
+  * As a developer I need to decide for a color scheme for branding and consistency.
+* Development: Wireframes
+  * As a developer I need to create wireframes so that I have a plan and guidlines how to build the websites structure.
+* Development: Favicon
+  * As a developer I need to create a favicon similar to the logotype to increase user experience.
+
+
+
 ### Strategy
 
 ### Scope
@@ -22,7 +46,7 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 
 ### Surface
 
-## Agile
+
 
 ## Features
 ### Existing Features
