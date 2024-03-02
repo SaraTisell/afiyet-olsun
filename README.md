@@ -125,6 +125,32 @@ If they confirm logout, they are redirected to Home Page with a message.
 
 ![logout message](docs/readme_img/confirm-logout-ao.png)
 
+#### Booking
+
+A user must have an account to be able to make a Resrvation at the website
+
+**Booking page for user with no account**
+
+![booking no account](docs/readme_img/book-no-account-ao.png)
+
+When a user that is not logged in navigates to the *Booking Page* they are asked to Login or Signup.
+  * Links to *Login* & *Signup* 
+Info text with benefits for having an account at Afiyet Olsun is displayed.
+
+**Booking page for user / staff with account**
+
+![booking form](docs/readme_img/bookingform-ao.png)
+
+A user or staff member can make a reservtion by fill in the form with valid information
+The field includes:
+* Name
+* Email
+* Date 
+* Time
+* Number of guests
+* Additional info (optional)
+* Submit button
+
 
 
 
