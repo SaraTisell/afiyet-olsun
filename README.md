@@ -154,7 +154,9 @@ The fields:
 * Submit button
 
 A staff member is able to make a reservation on the behalf of a guest that does not have an account at Afiyet Olsun.
-When a valid booking form has been submitted, the user/staff is redirected to the *Reservations* page with a confirm message of the reservation
+When a valid booking form has been submitted, the user/staff is redirected to the *Reservations* page with a confirm message of the reservation.
+
+![confim reservation](docs/readme_img/user-res-confim-ao.png)
 
 
 #### Reservations
@@ -169,7 +171,8 @@ If a user does not have any reservations they are asked if they would like to ma
 ![no reservation](docs/readme_img/no-reservations-ao.png)
 
 **Existing Reservations**
-
+If a user has reservations these will be displayed as a list at the *Reservation* page
+The user is able to edit their reservation or cansle their reservation by click one of the links under the reservation
 
 ![user reservations](docs/readme_img/user-reservation-ao.png)
 
