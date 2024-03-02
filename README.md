@@ -140,7 +140,7 @@ ERD's was made to design the database and the relation between the tables.
 
 <details>
 <summary>ERD Planning stage</summary>
-![planning erd](docs/readme_img/ao-erd.png)
+<img src="docs/readme_img/ao-erd.png">
 </details>
 
 
