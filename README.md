@@ -221,15 +221,36 @@ Users with account are able to leave reviews with a rating score and a comment.
 
 *Rating score is 1 -5 and are displayed with icons*
 🥙/🫓
-*For each score one filled flatbread "🥙" is increased.*
+*For each score one filled flatbread* "🥙" *is increased.*
  *Example:*
- *ratings score 3/5 will be displayed as "🥙🥙🥙🫓🫓"*
+ *ratings score 3/5 will be displayed as* "🥙🥙🥙🫓🫓"
 
+**Review page for user with no account**
+If the website has no reviews and a user is not logged in :
 
 ![no reviews](docs/readme_img/no-reviews-default-ao.png)
 
+If the website has reviews:
 
+![reviews no account](docs/readme_img/reviews-no-account.png)
 
+**Review page for user with account**
+
+If the user is logged in and the website does not have any reviews they are asked to leave one with a link displayed.
+
+![no reviews user](docs/readme_img/ao-no-reviews.png)
+
+**Leave review user**
+
+A user can leave a review by click the leave review link at the *Reviews* page and they are redirected to a form to fill in rating and comment and submit. After the user have leaved a reveiew they are redirected back to the *Reviews* page and a message is displayed.
+![leave reviw](docs/readme_img/leve-review-ao.png)
+
+![waiting approval](docs/readme_img/review-user-confrim-ao.png)
+
+A user can views their reviews by navigate and click the link *My Reviews* unser the Quick Links in the footer.
+The user is able to edit or delete their review.
+
+![users reviews](docs/readme_img/users-review-ao.png)
 
 * Future Features
 
