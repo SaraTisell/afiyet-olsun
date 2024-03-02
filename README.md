@@ -10,16 +10,17 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 
 ## Overview
 
-## User Experience Design
+## UX
+
+The goal with the website **Afiyet Olsun** is to create a user-friendly and efficient platform for both users and staff to manage reservations with full CRUD capabilities.
+Additional features will be the ability to view and leave reviews, peruse the restaurants menu and easily contact the restaurant. 
 
 ## Agile Methodology
 
-[Project **Afiyet Olsun** Kanban Board](https://github.com/users/SaraTisell/projects/5)
-
-Agile was used for effective planning and development of the website.
+Agile was used for efficient planning and development of the website, ensuring alignment with UX requirements.
 
 9 Milestones was created where each had EPIC's related to them and every EPIC had tasks that needed to be completed. 
-These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **Development**
+These tasks was divided into 3 topics **USER STORY**, **USER STORY Admin** and **Development**
 
 ### Milestone 1 - Design & Prototype
 #### EPIC 1 - Create user-centric design and prototype
@@ -130,6 +131,8 @@ These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **
   * As a developer I must write a clear and descriptive readme about the project.
 
 
+More information related to the different topics can be seen under each card at the projects kanban board.
+[Project **Afiyet Olsun** Kanban Board](https://github.com/users/SaraTisell/projects/5)
 
 ### Strategy
 
