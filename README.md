@@ -107,8 +107,15 @@ These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **
 * USER STORY: Delete rewievs 
   * As a site user I can delete my rewievs so that I can remove outdated and inaccurate feedback.
 
-
-
+### Milestone 7 - Testing
+#### EPIC 7 - Testing & Validation
+##### Tasks/Stories
+* Development: Feature testing
+  * As a developer I must test each feature so that the web application works with no issue.
+* Development: Code validation
+  * As a developer I must test the code thorugh validation tools to ensure it meets the coding standards.
+* Development: Performence and responsiveness testing
+  * As a developer I must test the responsiveness and perfomence of the web application to ensure optimal user experience.
 
 
 
