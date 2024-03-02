@@ -94,6 +94,8 @@ For a user with a regular account links to *My Reviews* and *My Reservation* is 
 
 #### Signup, Login, Logout
 
+**SignUp**
+
 ![signup](docs/readme_img/signup-ao.png)
 
 User are able to create an account by navigate to *Signup* and fill in fields for:
@@ -102,12 +104,15 @@ User are able to create an account by navigate to *Signup* and fill in fields fo
 * Password
 * Password Validation
 
+**Login**
+
 ![login](docs/readme_img/login-ao.png)
 
 User log in with:
 * Username
 * Password
 
+**Logout**
 ![logout](docs/readme_img/logout-ao.png)
 
 A user can logout by click on *Logout* in nav menu and, they are redirected to a logout page where they can confirm logout or go back to Home Page.
