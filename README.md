@@ -69,6 +69,36 @@ These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **
 * USER STORY: Login / Logout
   * As a site user I can login and logout from my account so that I can manage my bookings/rewievs and then logout when I am done.
 
+### Milestone 5 - Booking system
+#### EPIC 5 - Reservation management
+##### Tasks/Stories
+* Development: Reservation feature
+  * As a developer I must develope a booking feature so the user / staff can manage bookings/reservations.
+* USER STORY Admin: View reservations
+  * As a site admin I can view reservations so that I can manage them.
+* USER STORY Admin: Edit reservations
+  * As a site admin I can edit a guests reservation to accommodate changes as requested by the guest or changes that need to be made to restaurant seating.
+* USER STORY Admin: Cancel reservations
+  * As a site admin I can cancel a reservation so that the guest and the restaurant know the reservation is no longer valid.
+* USER STORY Admin: Make reservation for guest
+  * As a site admin I can make a table reservation on behalf of an guest so that the guest can be guaranted seating on their desired date and time.
+* USER STORY: Book reservation
+  * As a site user I can book a table reservation so that I can be guaranted seating on my desired date and time.
+* USER STORY: Edit reservation
+  * As a site user I can edit my table reservation so that I can change date, time or company size.
+* USER STORY: Cancel reservation
+  * As a site user I can cancel my table reservation so that I can notify the restaurant that the reservation is no longer needed due to changed plans
+* USER STORY: Send special request
+  * As a site user I can send a special request so that I can ask the restaurant if they can fullfill my request.
+  
+
+
+
+
+
+
+
+
 
 
 ### Strategy
