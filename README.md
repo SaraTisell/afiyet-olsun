@@ -33,6 +33,22 @@ These task was divided into 3 topics **USER STORY**, **USER STORY Admin** and **
 * Development: Favicon
   * As a developer I need to create a favicon similar to the logotype to increase user experience.
 
+### Milestone 2 - Database & Integration
+#### EPIC 2 - Database schema & system integration
+##### Tasks/Stories
+* Development: Implement database management system
+  * As a developer I need to implement DBMS into my project to offer database-dependent features.
+* Development: Set up database
+  * As a developer I need to set up DBMS to store and manage data for webb application.
+* Development: Entity-Relationship Diagrams
+  * As a developer I need to create ERD's for my database to define requirements.
+
+
+
+
+
+
+
 
 
 ### Strategy
