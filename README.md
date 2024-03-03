@@ -27,7 +27,13 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
     - [Python Validation](#python-validation)
-- [Feature Testing](#feature-testing)
+  - [Feature Testing](#feature-testing)
+    - [Navigation](#navigation-testing)
+    - [Account](#account-testing)
+    - [Contact](#contact-testing)
+    - [Booking](#booking-testing)
+    - [Reservations](#reservations-testing)
+    - [Reviews](#reviews-testing)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
 
@@ -562,7 +568,7 @@ All python file's were validated through CI Python Linter.
 
 ### Feature Testing
 
-#### Navigation
+#### Navigation Testing
 ![nav test](docs/readme_img/nav-test-ao.png)
 
 #### Account Testing
@@ -577,7 +583,7 @@ All python file's were validated through CI Python Linter.
 #### Reservations Testing
 ![reservation test](docs/readme_img/reservation-test-ao.png)
 
-#### Review Testing
+#### Reviews Testing
 ![review test](docs/readme_img/review-test-ao.png)
 
 
