@@ -632,7 +632,7 @@ All python file's were validated through CI Python Linter.
 
 ## Acknowledgements
 
-I want to thank 
+**I want to give Thanks to**
 * My mentor for all help, support and advice I got during the development of the project. 
 * Code Institute for the course material that helped me improve my skills and made it possible for me to develope this project.
 * The Code Institute tutoring team for effective support when problems occourred.
