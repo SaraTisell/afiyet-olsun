@@ -9,6 +9,28 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 [Visit Afiyet Olsun](https://afiyet-olsun-aa5b34b7e423.herokuapp.com/)
 
 ## Overview
+- [Afiyet Olsun](#afiyet-olsun)
+- [UX](#ux)
+- [Agile Methodology](#agile-methodology)
+- [Entity-Relationship Diagram](#entity-relationship-diagram)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+- [Design](#design)
+  - [Logotype](#logotype)
+    - [Favicon](#favicon)
+  - [Color Scheme](#color-scheme)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+  - [Responsiveness & Performance](#responsive-&-performance)
+    - [Lighthouse Testing](#lighthouse-testing)
+  - [Code Validation](#code-validation)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [Python Validation](#python-validation)
+- [Feature Testing](#feature-testing)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
+
 
 ## UX
 
@@ -506,7 +528,7 @@ Performance for mobile is a little low, several tests were run and some increasm
 
 ### Code Validation
 
-#### HTML Validator
+#### HTML Validation
 ##### W3C HTML Validator
 
 All code were validated through W3C Validation Service by direct input. Direct input were used due to limitation to access pages.
@@ -517,7 +539,7 @@ All code were validated through W3C Validation Service by direct input. Direct i
 
 ![wc3 html validator](docs/readme_img/base.w3-ao.png)
 
-#### CSS Validator
+#### CSS Validation
 ##### W3C CSS Validation
 
 CSS code were validated through W3C CSS Validation Service by direct input.
