@@ -351,6 +351,7 @@ Users with account are able to leave reviews with a rating score and a comment.
  *ratings score 3/5 will be displayed as* "🥙🥙🥙🫓🫓"
 
 **Review page for user with no account**
+
 If the website has no reviews and a user is not logged in :
 
 ![no reviews](docs/readme_img/no-reviews-default-ao.png)
@@ -364,6 +365,10 @@ If the website has reviews:
 If the user is logged in and the website does not have any reviews they are asked to leave one with a link displayed.
 
 ![no reviews user](docs/readme_img/ao-no-reviews.png)
+
+If there is reviews these are listed and a link to *Leave Review* is displayed.
+
+![all reviews user](docs/readme_img/reviews-users-ao.png)
 
 **Leave review user**
 
