@@ -161,6 +161,7 @@ These tasks was divided into 3 topics **USER STORY**, **USER STORY Admin** and *
 
 
 More information related to the different topics can be seen under each card at the projects kanban board.
+
 [Project **Afiyet Olsun** Kanban Board](https://github.com/users/SaraTisell/projects/5)
 
 ## Entity-Relationship Diagram
