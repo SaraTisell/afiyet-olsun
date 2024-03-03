@@ -15,6 +15,7 @@ The webapplication for Afiyet Olsun allows users and future guests to make table
 - [Entity-Relationship Diagram](#entity-relationship-diagram)
 - [Features](#features)
   - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
 - [Design](#design)
   - [Logotype](#logotype)
     - [Favicon](#favicon)
@@ -460,8 +461,15 @@ Wireframes was made to demonstrate the design of the website with colors and lay
 
 ![mobile](docs/readme_img/wireframe-mobile-ao.png)
 
+### Future Features
 
+Features left to implement to improve UX futher
 
+* Contact notification
+  * Staff will see a notification at the inbox when a user have sent a contact request
+* Open / unopened messages
+  * The staff is able to mark a message as opened in the Inbox page
+    * Today is this feature only avaiable in the Admin Interface
 
 ## Technologies Used
 * HTML
@@ -609,6 +617,18 @@ All python file's were validated through CI Python Linter.
 
 
 ## Credits
+
+* Food insperation to the menu were taken from this site
+  * https://traveltriangle.com/blog/turkish-foods/
+* Images where borrowed from these sites
+  * https://www.pexels.com/
+  * https://pixabay.com
+* Icons where borrowed from these sites
+  * https://symbl.cc/en/
+  * https://fontawesome.com/
+* Convert colors from HEX to RGB
+  * https://www.rapidtables.com/convert/color/hex-to-rgb.html
+
 
 ## Acknowledgements
 
