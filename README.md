@@ -167,6 +167,7 @@ More information related to the different topics can be seen under each card at 
 ## Entity-Relationship Diagram
 
 ERD's was made to design the database and the relation between the tables.
+Final ERD's was created with [DBeaver](https://dbeaver.io/)
 
 <details>
 <summary>ERD Planning stage</summary>
@@ -479,6 +480,10 @@ Features left to implement to improve UX futher
   * Custom CSS in an external file to style the website
 * Python 
   * Python was the main programming language for application using The Django Framework
+* Django 
+  * Django Framework was used to build this fullstack application
+* Bootstrap
+  * Boostrap Framework was used for Front-end development
 * GitPod
   * Gitpod IDE was used to develope the website
 * GitHub
